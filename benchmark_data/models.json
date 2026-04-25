@@ -379,6 +379,146 @@
         "max_tokens": 1024,
         "top_p": 1.0
       }
+    },
+    {
+      "name": "qwen2.5-3b-instruct",
+      "repo": "Qwen/Qwen2.5-3B-Instruct",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "3b", "dense"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen2.5-7b-instruct",
+      "repo": "Qwen/Qwen2.5-7B-Instruct",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "7b", "dense"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen3-coder-next-fp8",
+      "repo": "Qwen/Qwen3-Coder-Next-FP8",
+      "format": "HF",
+      "quantization": "fp8",
+      "backend": "vllm",
+      "tags": ["coding", "moe", "480b", "fp8", "coder"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 4096,
+        "gpu_memory_utilization": 0.95,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen3-next-80b-a3b-instruct-fp8",
+      "repo": "Qwen/Qwen3-Next-80B-A3B-Instruct-FP8",
+      "format": "HF",
+      "quantization": "fp8",
+      "backend": "vllm",
+      "tags": ["chat", "moe", "80b", "fp8"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.95,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen3-next-80b-a3b-thinking-fp8",
+      "repo": "Qwen/Qwen3-Next-80B-A3B-Thinking-FP8",
+      "format": "HF",
+      "quantization": "fp8",
+      "backend": "vllm",
+      "tags": ["chat", "moe", "80b", "fp8", "reasoning"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.95,
+        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen2.5-14b-instruct-1m",
+      "repo": "Qwen/Qwen2.5-14B-Instruct-1M",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "14b", "dense", "long-context"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 32768,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen2.5-7b-instruct-1m",
+      "repo": "Qwen/Qwen2.5-7B-Instruct-1M",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "7b", "dense", "long-context"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 32768,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     }
   ]
 }
