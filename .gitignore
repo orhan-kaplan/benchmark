@@ -26,6 +26,9 @@ Thumbs.db
 # Kiro
 .kiro/
 
+# Sample benchmarks (reference only, not part of project)
+sample-benchmark/
+
 # Benchmark runs (sonuçlar büyük olabilir, opsiyonel)
 # benchmark_data/runs/
 
