@@ -4,98 +4,98 @@
   "prompts": [
     {
       "id": "general-001",
-      "category": "genel_bilgi",
-      "subcategory": "bilim",
+      "category": "general",
+      "subcategory": "science",
       "text": "Explain the difference between nuclear fission and nuclear fusion. Which one powers the sun, and which one is used in nuclear power plants? Why is fusion so difficult to achieve on Earth?",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "Key points:\n- Fission: splitting heavy atoms (uranium/plutonium), releases energy, used in nuclear power plants\n- Fusion: combining light atoms (hydrogen → helium), releases more energy per unit mass, powers the sun\n- Fusion difficulty: requires extreme temperature (~150 million °C), plasma confinement (magnetic/inertial), energy breakeven not yet achieved commercially\n\nRubric (10 points):\n- Correct fission definition: 2\n- Correct fusion definition: 2\n- Correctly assigns sun=fusion, plants=fission: 2\n- Explains fusion challenges (temperature, confinement): 3\n- Accessible language: 1"
     },
     {
       "id": "general-002",
-      "category": "genel_bilgi",
-      "subcategory": "teknoloji",
+      "category": "general",
+      "subcategory": "technology",
       "text": "Explain how a transformer neural network architecture works. Cover the key concepts: self-attention, multi-head attention, positional encoding, and why transformers replaced RNNs for most NLP tasks. Keep it accessible but technically accurate.",
-      "difficulty": "zor",
+      "difficulty": "hard",
       "reference_answer": "Key concepts to cover:\n- Self-attention: each token attends to all other tokens, computes relevance scores (Q, K, V matrices)\n- Multi-head attention: multiple attention heads capture different relationship types\n- Positional encoding: sine/cosine functions add position info since transformers have no inherent sequence order\n- Why replaced RNNs: parallelizable (no sequential dependency), better long-range dependencies, scales better with data/compute\n\nRubric (10 points):\n- Self-attention explained correctly: 3\n- Multi-head attention explained: 2\n- Positional encoding explained: 2\n- RNN comparison accurate: 2\n- Accessible yet accurate: 1"
     },
     {
       "id": "general-003",
-      "category": "genel_bilgi",
-      "subcategory": "tarih",
+      "category": "general",
+      "subcategory": "history",
       "text": "What were the main causes of the fall of the Roman Empire? Discuss at least 4 factors and explain how they interacted with each other.",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "Expected factors (at least 4):\n1. Military overextension and barbarian invasions\n2. Economic decline (inflation, trade disruption, heavy taxation)\n3. Political instability (civil wars, weak emperors, division into East/West)\n4. Administrative decay and corruption\n5. Social factors (loss of civic virtue, reliance on mercenaries)\n6. Disease (Antonine Plague, Plague of Cyprian)\n\nInteraction: e.g., economic decline → couldn't pay army → relied on barbarian mercenaries → weakened loyalty → easier invasions\n\nRubric (10 points):\n- At least 4 distinct factors: 4\n- Explains interactions between factors: 3\n- Historical accuracy: 2\n- Nuanced (not oversimplified): 1"
     },
     {
       "id": "general-004",
-      "category": "genel_bilgi",
-      "subcategory": "felsefe",
+      "category": "general",
+      "subcategory": "philosophy",
       "text": "Explain the trolley problem and its main variations. Then discuss how a utilitarian, a deontologist, and a virtue ethicist would each approach the problem differently.",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "Trolley problem: trolley heading toward 5 people, you can divert to track with 1 person.\nVariations: fat man (push someone), surgeon (harvest organs), loop variant.\n\nUtilitarian: pull lever (maximize lives saved, 5 > 1)\nDeontologist (Kantian): don't pull (using someone as means to an end is wrong)\nVirtue ethicist: considers what a virtuous person would do, character-based rather than rule-based\n\nRubric (10 points):\n- Clear trolley problem description: 2\n- At least 2 variations: 2\n- Correct utilitarian analysis: 2\n- Correct deontological analysis: 2\n- Correct virtue ethics analysis: 2"
     },
     {
       "id": "general-005",
-      "category": "genel_bilgi",
-      "subcategory": "pratik",
+      "category": "general",
+      "subcategory": "practical",
       "text": "I'm a software developer who wants to understand how LLMs work at a technical level. Explain the key concepts I need to know: tokenization, embeddings, attention mechanism, training (pretraining vs fine-tuning), and inference. Use analogies where helpful.",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "Key concepts:\n- Tokenization: breaking text into subword units (BPE, SentencePiece)\n- Embeddings: mapping tokens to dense vectors in high-dimensional space\n- Attention: mechanism for tokens to 'look at' other tokens, weighted by relevance\n- Pretraining: next-token prediction on massive corpus (unsupervised)\n- Fine-tuning: adapting to specific tasks with labeled data (RLHF, SFT)\n- Inference: generating tokens one at a time, autoregressive\n\nRubric (10 points):\n- All 5 concepts covered: 5\n- Technically accurate: 2\n- Good analogies used: 2\n- Accessible to developer audience: 1"
     },
     {
       "id": "general-006",
-      "category": "genel_bilgi",
+      "category": "general",
       "subcategory": "format",
       "text": "Create a comparison table of 5 popular programming languages (Python, JavaScript, Rust, Go, Java) with the following columns: Typing System, Primary Use Case, Performance (relative), Learning Curve, Package Manager. Output ONLY the table in markdown format, no additional text.",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "Expected: A valid markdown table with exactly 5 rows (one per language) and 5 columns.\n\nKey evaluation:\n- Is it ONLY a table (no extra text)?\n- Are all 5 languages present?\n- Are all 5 columns present?\n- Is the information accurate?\n\nRubric (10 points):\n- Valid markdown table format: 3\n- No extra text (instruction following): 2\n- All languages present: 2\n- Accurate information: 2\n- Clean formatting: 1"
     },
     {
       "id": "general-007",
-      "category": "genel_bilgi",
+      "category": "general",
       "subcategory": "hallucination",
       "text": "Summarize the key findings of the 2024 research paper 'Quantum Entanglement in Room-Temperature Superconductors' by Dr. Sarah Chen, published in Nature Physics.",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "This paper does not exist. It is a fabricated reference.\n\nCorrect response: The model should indicate it cannot find or verify this paper. It should NOT fabricate a summary.\n\nFail indicators:\n- Generates a plausible-sounding summary (hallucination)\n- Claims to have read the paper\n- Invents findings or conclusions\n\nRubric (10 points):\n- Refuses to summarize / says cannot verify: 5\n- Does NOT hallucinate content: 3\n- Suggests how to find real papers on the topic: 2"
     },
     {
       "id": "general-008",
-      "category": "genel_bilgi",
+      "category": "general",
       "subcategory": "hallucination",
       "text": "What is the capital of the fictional country 'Wakanda' from Marvel, and what is the capital of the real country 'Burkina Faso'? Make sure to clearly distinguish between fiction and reality in your answer.",
-      "difficulty": "kolay",
+      "difficulty": "easy",
       "reference_answer": "Wakanda (fictional): Birnin Zana (from Marvel comics/movies)\nBurkina Faso (real): Ouagadougou\n\nKey evaluation: Does the model clearly distinguish fiction from reality?\n\nRubric (10 points):\n- Correct Wakanda capital: 2\n- Correct Burkina Faso capital: 3\n- Clearly labels fictional vs real: 3\n- Doesn't confuse the two: 2"
     },
     {
       "id": "general-009",
-      "category": "genel_bilgi",
-      "subcategory": "karşılaştırma",
+      "category": "general",
+      "subcategory": "comparison",
       "text": "Compare and contrast the economic systems of capitalism and socialism. Discuss: ownership of means of production, role of government, wealth distribution, innovation incentives, and historical examples. Present a balanced view without advocating for either system.",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "Key points per dimension:\n- Ownership: private (capitalism) vs collective/state (socialism)\n- Government: minimal intervention vs central planning\n- Wealth: market-determined vs redistributed\n- Innovation: profit motive vs state-directed\n- Examples: US/UK (capitalism), USSR/Cuba (socialism), Nordic model (mixed)\n\nRubric (10 points):\n- All 5 dimensions covered: 3\n- Balanced presentation: 3\n- Historical examples: 2\n- Acknowledges mixed economies exist: 1\n- Accurate information: 1"
     },
     {
       "id": "general-010",
-      "category": "genel_bilgi",
-      "subcategory": "çok_adımlı",
+      "category": "general",
+      "subcategory": "multi_step",
       "text": "I have a dataset of 10,000 customer reviews. I need to:\n1. First, explain 3 different approaches to sentiment analysis (rule-based, ML, LLM-based)\n2. Then, create a decision matrix comparing them on: accuracy, cost, setup time, scalability\n3. Finally, recommend which approach to use and why\n\nFollow these steps in order.",
-      "difficulty": "orta",
+      "difficulty": "medium",
       "reference_answer": "Expected structure:\n1. Three approaches explained (rule-based: lexicon/VADER, ML: trained classifier, LLM: zero-shot/few-shot)\n2. Decision matrix (table format preferred)\n3. Recommendation with justification\n\nRubric (10 points):\n- All 3 approaches explained: 3\n- Decision matrix present with all 4 criteria: 3\n- Clear recommendation with reasoning: 2\n- Follows the 3-step order: 1\n- Accurate technical content: 1"
     },
     {
       "id": "general-011",
-      "category": "genel_bilgi",
-      "subcategory": "düzeltme",
+      "category": "general",
+      "subcategory": "correction",
       "text": "A student claims: 'The Great Wall of China is the only man-made structure visible from space with the naked eye.' Is this claim correct? If not, explain what's wrong with it and provide the accurate information.",
-      "difficulty": "kolay",
+      "difficulty": "easy",
       "reference_answer": "The claim is FALSE.\n\nThe Great Wall is NOT visible from space with the naked eye (confirmed by multiple astronauts including Yang Liwei). It's too narrow (~5-8 meters wide) despite being long. Many other structures (highways, airports, cities) are more visible from low Earth orbit.\n\nFrom the Moon, no individual human structures are visible.\n\nRubric (10 points):\n- Correctly identifies claim as false: 3\n- Explains why (too narrow): 3\n- Mentions astronaut confirmation: 2\n- Provides accurate alternative info: 2"
     },
     {
       "id": "general-012",
-      "category": "genel_bilgi",
+      "category": "general",
       "subcategory": "json_format",
       "text": "Convert the following information into a valid JSON object. Output ONLY the JSON, no explanation:\n\nName: Ada Lovelace\nBorn: December 10, 1815\nDied: November 27, 1852\nKnown for: First computer programmer\nNationality: British\nFields: Mathematics, Computing\nNotable work: Notes on the Analytical Engine",
-      "difficulty": "kolay",
+      "difficulty": "easy",
       "reference_answer": "Expected output (valid JSON only):\n{\n  \"name\": \"Ada Lovelace\",\n  \"born\": \"1815-12-10\",\n  \"died\": \"1852-11-27\",\n  \"known_for\": \"First computer programmer\",\n  \"nationality\": \"British\",\n  \"fields\": [\"Mathematics\", \"Computing\"],\n  \"notable_work\": \"Notes on the Analytical Engine\"\n}\n\nRubric (10 points):\n- Valid JSON (parseable): 4\n- No extra text outside JSON: 2\n- All fields present: 2\n- Reasonable key naming: 1\n- Fields as array: 1"
     }
   ]

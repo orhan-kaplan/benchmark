@@ -210,7 +210,7 @@ def test_prompt_missing_required_raises(field: str):
     """Missing a required field in Prompt raises ValidationError."""
     data = {
         "id": "p-001",
-        "category": "kodlama",
+        "category": "coding",
         "text": "Write a function",
     }
     del data[field]

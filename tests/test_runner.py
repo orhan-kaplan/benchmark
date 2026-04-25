@@ -187,8 +187,8 @@ class TestRun:
 
         stored = storage.read_results(result.run_id)
         categories = {r["category"] for r in stored}
-        assert "kodlama" in categories
-        assert "çeviri" in categories
+        assert "coding" in categories
+        assert "translation" in categories
 
     @pytest.mark.asyncio
     async def test_run_with_repetition(

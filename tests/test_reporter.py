@@ -62,9 +62,9 @@ def _make_result(prompt_id: str, model_name: str, category: str,
 class TestGenerateMatrix:
     def test_basic_matrix(self, storage, reporter):
         results = [
-            _make_result("p1", "modelA", "kodlama", total_time_ms=100),
-            _make_result("p2", "modelA", "kodlama", total_time_ms=200),
-            _make_result("p1", "modelB", "kodlama", total_time_ms=300),
+            _make_result("p1", "modelA", "coding", total_time_ms=100),
+            _make_result("p2", "modelA", "coding", total_time_ms=200),
+            _make_result("p1", "modelB", "coding", total_time_ms=300),
         ]
         scores = [
             {"prompt_id": "p1", "model_name": "modelA", "manual_score": 8, "judge_score": None, "comment": None},
@@ -76,14 +76,14 @@ class TestGenerateMatrix:
         matrix = reporter.generate_matrix("run1")
         assert "modelA" in matrix.models
         assert "modelB" in matrix.models
-        assert "kodlama" in matrix.categories
+        assert "coding" in matrix.categories
 
-        cell_a = matrix.cells["modelA"]["kodlama"]
+        cell_a = matrix.cells["modelA"]["coding"]
         assert cell_a.avg_score == pytest.approx(7.0)  # (8+6)/2
         assert cell_a.avg_time_ms == pytest.approx(150.0)  # (100+200)/2
         assert cell_a.sample_count == 2
 
-        cell_b = matrix.cells["modelB"]["kodlama"]
+        cell_b = matrix.cells["modelB"]["coding"]
         assert cell_b.avg_score == pytest.approx(9.0)
         assert cell_b.sample_count == 1
 
@@ -95,31 +95,31 @@ class TestGenerateMatrix:
         assert matrix.cells == {}
 
     def test_no_scores(self, storage, reporter):
-        results = [_make_result("p1", "modelA", "çeviri")]
+        results = [_make_result("p1", "modelA", "translation")]
         _seed_run(storage, "run_no_scores", results)
         matrix = reporter.generate_matrix("run_no_scores")
-        cell = matrix.cells["modelA"]["çeviri"]
+        cell = matrix.cells["modelA"]["translation"]
         assert cell.avg_score is None
         assert cell.avg_time_ms is not None
         assert cell.sample_count == 1
 
     def test_judge_score_fallback(self, storage, reporter):
-        results = [_make_result("p1", "modelA", "kodlama")]
+        results = [_make_result("p1", "modelA", "coding")]
         scores = [
             {"prompt_id": "p1", "model_name": "modelA", "manual_score": None, "judge_score": 7.5, "comment": None},
         ]
         _seed_run(storage, "run_judge", results, scores)
         matrix = reporter.generate_matrix("run_judge")
-        assert matrix.cells["modelA"]["kodlama"].avg_score == pytest.approx(7.5)
+        assert matrix.cells["modelA"]["coding"].avg_score == pytest.approx(7.5)
 
     def test_manual_score_preferred_over_judge(self, storage, reporter):
-        results = [_make_result("p1", "modelA", "kodlama")]
+        results = [_make_result("p1", "modelA", "coding")]
         scores = [
             {"prompt_id": "p1", "model_name": "modelA", "manual_score": 9, "judge_score": 5.0, "comment": None},
         ]
         _seed_run(storage, "run_prefer", results, scores)
         matrix = reporter.generate_matrix("run_prefer")
-        assert matrix.cells["modelA"]["kodlama"].avg_score == pytest.approx(9.0)
+        assert matrix.cells["modelA"]["coding"].avg_score == pytest.approx(9.0)
 
 
 # --- generate_ranking ---
@@ -127,9 +127,9 @@ class TestGenerateMatrix:
 class TestGenerateRanking:
     def test_ranking_order(self, storage, reporter):
         results = [
-            _make_result("p1", "modelA", "kodlama", total_time_ms=100),
-            _make_result("p1", "modelB", "kodlama", total_time_ms=200),
-            _make_result("p1", "modelC", "kodlama", total_time_ms=300),
+            _make_result("p1", "modelA", "coding", total_time_ms=100),
+            _make_result("p1", "modelB", "coding", total_time_ms=200),
+            _make_result("p1", "modelC", "coding", total_time_ms=300),
         ]
         scores = [
             {"prompt_id": "p1", "model_name": "modelA", "manual_score": 5, "judge_score": None, "comment": None},
@@ -147,9 +147,9 @@ class TestGenerateRanking:
 
     def test_ranking_with_category_filter(self, storage, reporter):
         results = [
-            _make_result("p1", "modelA", "kodlama"),
-            _make_result("p2", "modelA", "çeviri"),
-            _make_result("p1", "modelB", "kodlama"),
+            _make_result("p1", "modelA", "coding"),
+            _make_result("p2", "modelA", "translation"),
+            _make_result("p1", "modelB", "coding"),
         ]
         scores = [
             {"prompt_id": "p1", "model_name": "modelA", "manual_score": 5, "judge_score": None, "comment": None},
@@ -158,7 +158,7 @@ class TestGenerateRanking:
         ]
         _seed_run(storage, "run_cat", results, scores)
 
-        ranking = reporter.generate_ranking("run_cat", category="kodlama")
+        ranking = reporter.generate_ranking("run_cat", category="coding")
         assert len(ranking) == 2
         assert ranking[0].model_name == "modelB"
         assert ranking[0].avg_score == pytest.approx(8.0)
@@ -174,9 +174,9 @@ class TestGenerateRanking:
 class TestGenerateVRAMReport:
     def test_vram_stats(self, storage, reporter):
         results = [
-            _make_result("p1", "modelA", "kodlama", vram_used_mb=8000.0),
-            _make_result("p2", "modelA", "kodlama", vram_used_mb=10000.0),
-            _make_result("p1", "modelB", "kodlama", vram_used_mb=14000.0),
+            _make_result("p1", "modelA", "coding", vram_used_mb=8000.0),
+            _make_result("p2", "modelA", "coding", vram_used_mb=10000.0),
+            _make_result("p1", "modelB", "coding", vram_used_mb=14000.0),
         ]
         _seed_run(storage, "run_vram", results)
 
@@ -186,9 +186,9 @@ class TestGenerateVRAMReport:
 
     def test_vram_limit_partitioning(self, storage, reporter):
         results = [
-            _make_result("p1", "modelA", "kodlama", vram_used_mb=8000.0),
-            _make_result("p2", "modelA", "kodlama", vram_used_mb=10000.0),
-            _make_result("p1", "modelB", "kodlama", vram_used_mb=20000.0),
+            _make_result("p1", "modelA", "coding", vram_used_mb=8000.0),
+            _make_result("p2", "modelA", "coding", vram_used_mb=10000.0),
+            _make_result("p1", "modelB", "coding", vram_used_mb=20000.0),
         ]
         _seed_run(storage, "run_vram_limit", results)
 
@@ -199,7 +199,7 @@ class TestGenerateVRAMReport:
         assert "modelB" in exceeding_names  # peak 20000 > 16384
 
     def test_vram_no_snapshots(self, storage, reporter):
-        results = [_make_result("p1", "modelA", "kodlama")]
+        results = [_make_result("p1", "modelA", "coding")]
         _seed_run(storage, "run_no_vram", results)
         report = reporter.generate_vram_report("run_no_vram")
         assert report.models_within_limit == []
@@ -210,7 +210,7 @@ class TestGenerateVRAMReport:
 
 class TestExportJSON:
     def test_export_json(self, storage, reporter, tmp_path):
-        results = [_make_result("p1", "modelA", "kodlama")]
+        results = [_make_result("p1", "modelA", "coding")]
         scores = [
             {"prompt_id": "p1", "model_name": "modelA", "manual_score": 8, "judge_score": None, "comment": None},
         ]
@@ -229,7 +229,7 @@ class TestExportJSON:
 
 class TestExportCSV:
     def test_export_csv_basic(self, storage, reporter, tmp_path):
-        results = [_make_result("p1", "modelA", "çeviri")]
+        results = [_make_result("p1", "modelA", "translation")]
         _seed_run(storage, "run_csv", results)
 
         out = tmp_path / "export.csv"
@@ -239,10 +239,10 @@ class TestExportCSV:
         lines = content.strip().split("\n")
         assert len(lines) == 2  # header + 1 data row
         assert "prompt_id" in lines[0]
-        assert "çeviri" in lines[1]  # Turkish chars preserved
+        assert "translation" in lines[1]  # Turkish chars preserved
 
     def test_export_csv_turkish_chars(self, storage, reporter, tmp_path):
-        results = [_make_result("p1", "modelA", "yaratıcı_yazarlık")]
+        results = [_make_result("p1", "modelA", "creative")]
         _seed_run(storage, "run_csv_tr", results)
 
         out = tmp_path / "export_tr.csv"
@@ -251,7 +251,7 @@ class TestExportCSV:
         raw = out.read_bytes()
         assert raw[:3] == b"\xef\xbb\xbf"  # UTF-8 BOM
         content = raw.decode("utf-8-sig")
-        assert "yaratıcı_yazarlık" in content
+        assert "creative" in content
 
 
 # --- generate_summary ---
@@ -259,9 +259,9 @@ class TestExportCSV:
 class TestGenerateSummary:
     def test_summary(self, storage, reporter):
         results = [
-            _make_result("p1", "modelA", "kodlama", success=True),
-            _make_result("p2", "modelA", "kodlama", success=True),
-            _make_result("p1", "modelB", "kodlama", success=False),
+            _make_result("p1", "modelA", "coding", success=True),
+            _make_result("p2", "modelA", "coding", success=True),
+            _make_result("p1", "modelB", "coding", success=False),
         ]
         _seed_run(storage, "run_summary", results)
 
@@ -274,7 +274,7 @@ class TestGenerateSummary:
         assert summary.matrix is not None
 
     def test_summary_with_meta(self, storage, reporter):
-        results = [_make_result("p1", "modelA", "kodlama")]
+        results = [_make_result("p1", "modelA", "coding")]
         _seed_run(storage, "run_meta", results)
         meta_path = storage.runs_dir / "run_meta" / "meta.json"
         storage.write_json(meta_path, {"timestamp": "2025-06-15T10:30:00"})

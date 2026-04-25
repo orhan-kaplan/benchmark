@@ -103,7 +103,7 @@ class TestFilterPrompts:
             ],
         )
         manager.create(ts)
-        result = manager.filter_prompts("mixed", category="çeviri")
+        result = manager.filter_prompts("mixed", category="translation")
         assert len(result) == 2
         assert all(p.category == PromptCategory.TRANSLATION for p in result)
 
@@ -116,7 +116,7 @@ class TestFilterPrompts:
             ],
         )
         manager.create(ts)
-        result = manager.filter_prompts("diff", difficulty="kolay")
+        result = manager.filter_prompts("diff", difficulty="easy")
         assert len(result) == 1
         assert result[0].difficulty == Difficulty.EASY
 
@@ -130,7 +130,7 @@ class TestFilterPrompts:
             ],
         )
         manager.create(ts)
-        result = manager.filter_prompts("both", category="kodlama", difficulty="kolay")
+        result = manager.filter_prompts("both", category="coding", difficulty="easy")
         assert len(result) == 1
         assert result[0].id == "1"
 

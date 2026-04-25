@@ -89,8 +89,8 @@ class TestSetManager:
 
         Args:
             set_name: Filtrelenecek test seti adı.
-            category: Filtrelenecek kategori değeri (ör. ``"çeviri"``).
-            difficulty: Filtrelenecek zorluk seviyesi (ör. ``"kolay"``).
+            category: Filtrelenecek kategori değeri (ör. ``"translation"``).
+            difficulty: Filtrelenecek zorluk seviyesi (ör. ``"easy"``).
 
         Returns:
             Filtre kriterlerini karşılayan prompt listesi.

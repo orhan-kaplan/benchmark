@@ -422,13 +422,13 @@ def build_parser() -> argparse.ArgumentParser:
     ts_add_parser.add_argument("--prompt-id", required=True, help="Prompt benzersiz kimliği")
     ts_add_parser.add_argument(
         "--category", required=True,
-        choices=["çeviri", "kodlama", "muhakeme", "yaratıcı_yazarlık", "genel_bilgi"],
+        choices=["translation", "coding", "reasoning", "creative", "general"],
         help="Prompt kategorisi",
     )
     ts_add_parser.add_argument("--subcategory", default=None, help="Alt kategori")
     ts_add_parser.add_argument("--text", required=True, help="Prompt metni")
     ts_add_parser.add_argument(
-        "--difficulty", default="orta", choices=["kolay", "orta", "zor"],
+        "--difficulty", default="medium", choices=["easy", "medium", "hard"],
         help="Zorluk seviyesi (varsayılan: orta)",
     )
     ts_add_parser.add_argument("--reference-answer", default=None, help="Referans yanıt")

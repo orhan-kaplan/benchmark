@@ -17,17 +17,17 @@ class Backend(str, Enum):
 
 
 class PromptCategory(str, Enum):
-    TRANSLATION = "çeviri"
-    CODING = "kodlama"
-    REASONING = "muhakeme"
-    CREATIVE = "yaratıcı_yazarlık"
-    GENERAL = "genel_bilgi"
+    TRANSLATION = "translation"
+    CODING = "coding"
+    REASONING = "reasoning"
+    CREATIVE = "creative"
+    GENERAL = "general"
 
 
 class Difficulty(str, Enum):
-    EASY = "kolay"
-    MEDIUM = "orta"
-    HARD = "zor"
+    EASY = "easy"
+    MEDIUM = "medium"
+    HARD = "hard"
 
 
 # --- Model Kataloğu ---
@@ -160,7 +160,7 @@ class JudgeConfig(BaseModel):
     model_name: str
     api_endpoint: str
     prompt_templates: dict[str, str] = {
-        "çeviri": (
+        "translation": (
             "Aşağıdaki çeviriyi değerlendir. Doğruluk (1-5) ve akıcılık (1-5) olarak puanla.\n"
             "Kaynak dil: Çince, hedef dil: İngilizce.\n"
             "Toplam puan = doğruluk + akıcılık (2-10 arası).\n"
@@ -169,7 +169,7 @@ class JudgeConfig(BaseModel):
             "Çeviri: {answer}\n"
             "Puan:"
         ),
-        "kodlama": (
+        "coding": (
             "Aşağıdaki kod yanıtını değerlendir. Çalışırlık (1-5) ve kod kalitesi (1-5) olarak puanla.\n"
             "Toplam puan = çalışırlık + kalite (2-10 arası).\n"
             "Sadece toplam puanı yaz.\n\n"

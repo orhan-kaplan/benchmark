@@ -45,7 +45,7 @@ model_name_st = st.text(
     max_size=15,
 )
 
-category_st = st.sampled_from(["kodlama", "çeviri", "muhakeme", "yaratıcı_yazarlık", "genel_bilgi"])
+category_st = st.sampled_from(["coding", "translation", "reasoning", "creative", "general"])
 
 score_st = st.integers(min_value=1, max_value=10)
 
@@ -348,7 +348,7 @@ def vram_run_st(draw):
             vram = draw(vram_mb_st)
             peak = max(peak, vram)
             results.append(
-                _make_result(f"p{pid}", model, "kodlama", vram_used_mb=vram)
+                _make_result(f"p{pid}", model, "coding", vram_used_mb=vram)
             )
             pid += 1
         model_peak[model] = peak

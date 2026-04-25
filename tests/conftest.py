@@ -33,7 +33,7 @@ def sample_model_entry() -> ModelEntry:
         format="FP16",
         quantization=None,
         backend="vllm",
-        tags=["test", "çeviri"],
+        tags=["test", "translation"],
         api_endpoint="http://localhost:8000",
     )
 

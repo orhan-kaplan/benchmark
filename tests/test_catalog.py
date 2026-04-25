@@ -103,9 +103,9 @@ class TestUpdate:
     def test_update_persists(self, tmp_path: Path) -> None:
         catalog = ModelCatalog(tmp_path)
         catalog.register(_make_entry("upd"))
-        catalog.update("upd", {"tags": ["çeviri"]})
+        catalog.update("upd", {"tags": ["translation"]})
         catalog2 = ModelCatalog(tmp_path)
-        assert catalog2.get("upd").tags == ["çeviri"]
+        assert catalog2.get("upd").tags == ["translation"]
 
     def test_update_missing_raises(self, tmp_path: Path) -> None:
         catalog = ModelCatalog(tmp_path)
@@ -150,21 +150,21 @@ class TestFilterBy:
 
     def test_filter_by_tags_all_match(self, tmp_path: Path) -> None:
         catalog = ModelCatalog(tmp_path)
-        catalog.register(_make_entry("t1", tags=["çeviri", "muhakeme"]))
-        catalog.register(_make_entry("t2", tags=["çeviri"]))
-        result = catalog.filter_by(tags=["çeviri", "muhakeme"])
+        catalog.register(_make_entry("t1", tags=["translation", "reasoning"]))
+        catalog.register(_make_entry("t2", tags=["translation"]))
+        result = catalog.filter_by(tags=["translation", "reasoning"])
         assert len(result) == 1
         assert result[0].name == "t1"
 
     def test_filter_by_backend_and_tags(self, tmp_path: Path) -> None:
         catalog = ModelCatalog(tmp_path)
         catalog.register(
-            _make_entry("combo", backend=Backend.VLLM, tags=["kodlama"])
+            _make_entry("combo", backend=Backend.VLLM, tags=["coding"])
         )
         catalog.register(
-            _make_entry("other", backend=Backend.OLLAMA, tags=["kodlama"])
+            _make_entry("other", backend=Backend.OLLAMA, tags=["coding"])
         )
-        result = catalog.filter_by(backend="vllm", tags=["kodlama"])
+        result = catalog.filter_by(backend="vllm", tags=["coding"])
         assert len(result) == 1
         assert result[0].name == "combo"
 
