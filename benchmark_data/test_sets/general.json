@@ -8,7 +8,7 @@
       "subcategory": "science",
       "text": "Explain the difference between nuclear fission and nuclear fusion. Which one powers the sun, and which one is used in nuclear power plants? Why is fusion so difficult to achieve on Earth?",
       "difficulty": "medium",
-      "reference_answer": "Key points:\n- Fission: splitting heavy atoms (uranium/plutonium), releases energy, used in nuclear power plants\n- Fusion: combining light atoms (hydrogen → helium), releases more energy per unit mass, powers the sun\n- Fusion difficulty: requires extreme temperature (~150 million °C), plasma confinement (magnetic/inertial), energy breakeven not yet achieved commercially\n\nRubric (10 points):\n- Correct fission definition: 2\n- Correct fusion definition: 2\n- Correctly assigns sun=fusion, plants=fission: 2\n- Explains fusion challenges (temperature, confinement): 3\n- Accessible language: 1"
+      "reference_answer": "Key points:\n- Fission: splitting heavy atoms (uranium/plutonium), releases energy, used in nuclear power plants\n- Fusion: combining light atoms (hydrogen → helium), releases more energy per unit mass, powers the sun\n- Fusion difficulty: requires extreme temperature (~150 million °C), plasma confinement (magnetic/inertial), fusion is not currently used as a commercial electricity source\n\nRubric (10 points):\n- Correct fission definition: 2\n- Correct fusion definition: 2\n- Correctly assigns sun=fusion, plants=fission: 2\n- Explains fusion challenges (temperature, confinement): 3\n- Accessible language: 1"
     },
     {
       "id": "general-002",

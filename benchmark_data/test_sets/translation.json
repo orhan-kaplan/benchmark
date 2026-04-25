@@ -8,7 +8,7 @@
       "subcategory": "novel",
       "text": "Translate the following Chinese literary passage to English. Preserve the literary style and tone:\n\n我在朦胧中，眼前展开一片海边碧绿的沙地来，上面深蓝的天空中挂着一轮金黄的圆月。我想：希望本是无所谓有，无所谓无的。这正如地上的路；其实地上本没有路，走的人多了，也便成了路。",
       "difficulty": "medium",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- No skipped paragraphs/segments: 2\n- Tone and literary style preserved: 2\n- Fluent English: 1\n- Character names/terms consistent: 1\n- No hallucinated additions: 1"
     },
     {
       "id": "tr-002",
@@ -16,7 +16,7 @@
       "subcategory": "novel",
       "text": "Translate the following Chinese literary passage to English. Preserve the emotional depth and imagery:\n\n他不知道那个梦已经丢在他背后了，丢在这个城市那边那一片无垠的混沌之中不知什么地方了，那里合众国的黑黝黝的田野在夜色中向前伸展。",
       "difficulty": "hard",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- No skipped paragraphs/segments: 2\n- Tone and literary style preserved: 2\n- Fluent English: 1\n- Character names/terms consistent: 1\n- No hallucinated additions: 1"
     },
     {
       "id": "tr-003",
@@ -24,7 +24,7 @@
       "subcategory": "novel",
       "text": "Translate the following Chinese passage to English with natural, flowing prose:\n\n那是最美好的时代，那是最糟糕的时代；那是智慧的年头，那是愚昧的年头；那是信仰的时期，那是怀疑的时期；那是光明的季节，那是黑暗的季节。",
       "difficulty": "easy",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- No skipped paragraphs/segments: 2\n- Tone and literary style preserved: 2\n- Fluent English: 1\n- Character names/terms consistent: 1\n- No hallucinated additions: 1"
     },
     {
       "id": "tr-004",
@@ -32,7 +32,7 @@
       "subcategory": "web_novel",
       "text": "Translate the following Chinese xianxia/cultivation novel passage to English. Use appropriate genre terminology (cultivation, qi, spiritual energy, etc.):\n\n叶凡盘膝坐在山巅之上，周身灵气如潮水般涌来。丹田之中，一颗金色的元婴缓缓睁开双眼，散发出令天地变色的威压。突破金丹期的瓶颈，他已经等了整整三年。",
       "difficulty": "medium",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- Genre terminology (cultivation, qi, etc.): 2\n- Action/atmosphere preserved: 2\n- Fluent English: 1\n- Character voice consistency: 1\n- No omissions or additions: 1"
     },
     {
       "id": "tr-005",
@@ -40,7 +40,7 @@
       "subcategory": "web_novel",
       "text": "Translate the following Chinese fantasy novel passage to English. Maintain the dramatic tension and action:\n\n剑光如虹，划破长空。苏尘手持青锋剑，身形如鬼魅般穿梭在数十名黑衣人之间。每一剑挥出，必有一人倒下。鲜血染红了他的白衣，但他的眼神依旧冰冷如霜。",
       "difficulty": "medium",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- Genre terminology (cultivation, qi, etc.): 2\n- Action/atmosphere preserved: 2\n- Fluent English: 1\n- Character voice consistency: 1\n- No omissions or additions: 1"
     },
     {
       "id": "tr-006",
@@ -48,7 +48,7 @@
       "subcategory": "web_novel",
       "text": "Translate the following Chinese romance web novel passage to English. Capture the emotional nuance:\n\n她站在雨中，看着他远去的背影，泪水和雨水混在一起，分不清哪个是哪个。三年的感情，就这样在一个雨夜里画上了句号。她想叫住他，但喉咙像是被什么东西堵住了，一个字也说不出来。",
       "difficulty": "medium",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- Genre terminology (cultivation, qi, etc.): 2\n- Action/atmosphere preserved: 2\n- Fluent English: 1\n- Character voice consistency: 1\n- No omissions or additions: 1"
     },
     {
       "id": "tr-007",
@@ -56,7 +56,7 @@
       "subcategory": "technical",
       "text": "Translate the following Chinese technical text to English accurately:\n\n大型语言模型通过自注意力机制处理输入序列中的每个标记。在推理阶段，键值缓存技术可以显著减少重复计算，从而提高生成速度。然而，随着上下文长度的增加，缓存所需的显存也会线性增长，这对部署提出了更高的硬件要求。",
       "difficulty": "medium",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Technical meaning accuracy: 4\n- Terminology correctness: 2\n- Fluent English: 2\n- No omissions or additions: 1\n- Sentence clarity: 1"
     },
     {
       "id": "tr-008",
@@ -64,7 +64,7 @@
       "subcategory": "technical",
       "text": "Translate the following Chinese academic abstract to English:\n\n本文提出了一种基于混合专家模型的高效推理框架。通过动态路由机制，系统能够在保持模型质量的同时，将计算成本降低至原来的十分之一。实验结果表明，该方法在多个基准测试中均达到了与密集模型相当的性能水平。",
       "difficulty": "hard",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Technical meaning accuracy: 4\n- Terminology correctness: 2\n- Fluent English: 2\n- No omissions or additions: 1\n- Sentence clarity: 1"
     },
     {
       "id": "tr-009",
@@ -72,7 +72,7 @@
       "subcategory": "casual",
       "text": "Translate the following Chinese casual conversation to natural English:\n\nA: 哎，你今天下班后有空吗？想约你去那家新开的火锅店。\nB: 可以啊！听说那家店排队要排很久，我们早点去吧。\nA: 行，那五点半我在公司楼下等你。对了，小王说他也想来。\nB: 没问题，人多更热闹。",
       "difficulty": "easy",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- Natural conversational tone: 3\n- Fluent English: 2\n- No omissions or additions: 1\n- Cultural nuance preserved: 1"
     },
     {
       "id": "tr-010",
@@ -80,7 +80,7 @@
       "subcategory": "casual",
       "text": "Translate the following Chinese social media post to natural English:\n\n今天终于把拖了两个月的项目交了！感觉整个人都轻松了。晚上准备犒劳一下自己，点个外卖看个电影。有没有什么好看的电影推荐？最近什么类型都行，就是不想看太烧脑的。",
       "difficulty": "easy",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- Natural conversational tone: 3\n- Fluent English: 2\n- No omissions or additions: 1\n- Cultural nuance preserved: 1"
     },
     {
       "id": "tr-011",
@@ -88,7 +88,7 @@
       "subcategory": "novel",
       "text": "Translate the following Chinese historical fiction novel passage to English. This is a long passage with political intrigue, dialogue, and narrative. Preserve the tone, character voices, and the strategic/political nuance:\n\n第五百七十一章 阳谋\n\n只能有一个活着出来。\n\n身为律师的张斐，是很少凭空放狠话，所以这一句话也绝不是在开玩笑。\n\n如果税收真的呈现断崖式下跌，那么中央必然是会问责的，而且一定是要严查，因为中央会担心这引发连锁反应，那么到时公检法是要负主要责任的。\n\n因为就是警署选择自主申报的，你们不来，一点事都没有。\n\n这就会直接导致公检法必定是要与地主开战。\n\n那么双方就只能拼命。\n\n虽然张斐认为，还不至于会走到这一步，但是许芷倩仍旧感到非常担忧。\n\n她常年跟随许遵去各地当官，但不管是知县，知府，首要责任，就是收税。她对于这里面情况是非常清楚。\n\n如果说自耕农都凭借地契交税，同时总税额还不能下降，那么无异于打破现有的税收系统。\n\n因为往往大地主是不交税的，他们有权有势，可以用各种办法规避税收，但官府又必须收到足够的地税，不然的话，没法想上面交差，故此这部分税收，将会由那些二等户、三等户、四等户分摊。\n\n这么多人分摊少部分人的税，若在丰收年，百姓暂时也活得下去，关键也没有办法反对。\n\n可一旦凭借地契交税，情况就逆转过来，税收开始集中往上流。大地主可能就要拿出比平时多很多倍的税。\n\n可要从大地主嘴里多扣出一文钱，那都是难于上青天啊！\n\n在回去的路上，许芷倩就很是担忧道：\"那些大地主在当地势力非常强大，如果都瞒报、谎报，我们真的斗得过吗？\"\n\n这不同于在京城，京城有皇帝和王安石的支持，那当然不用担心。\n\n张斐笑道：\"这种可能性不大。\"\n\n许芷倩问道：\"为何？\"\n\n张斐道：\"其实那些地主也非是法外之人，他们也是要守法的，而他们对付朝廷往往就一招，那就是煽动百姓闹事。但凡史书记载，有关地方闹事，民怨沸腾，理由都是惊人的像似.\"\n\n许芷倩道：\"增税。\"\n\n张斐点点头道：\"在太平盛世之际，地主与官府勾结，利用特权避税，百姓也能帮他们负担，只要财政没有问题，那么朝廷也不会严查，大家都是得过且过，以安定为重。可是一旦财政有问题，朝廷就必然会选择增税，同时也会加大督查，地主只要不傻，就一定会利用增税，去挑拨百姓与朝廷矛盾，掀起民怨，从而迫使朝廷让步。可见这问题的根源，从来不在地主身上，而是朝廷自己身上，因为朝廷永远都喜欢将查税与增税捆绑在一起执行，简单来说，那就是立法抢钱，这谁受得了。\"\n\n许芷倩若有所思地点点头：\"不错，听说当初包相公担任转运使时，就查过税，很多地主都还是老实交税，这回朝廷也并没有要增税。\"\n\n张斐笑道：\"其实从某种意义上来说，还是在减税，在这种情况去查税，地主就难以去制造动乱，那就只能用合法手段来规避。\"\n\n许芷倩笑道：\"如果以法斗法，他们又岂是我们公检法的对手。\"\n\n张斐点点头道：\"正是如此，公检法的专业性，也是其中一个关键原因，之前那些官吏都很腐败，自己都不尊法，就是没有问题，他们都能在收税的过程中制造问题出来。故此我给警署的建议，就是来多少，收多少，他们说多少，那就是多少。咱们秋后算账，这都是为了防止他们煽动民怨。\"\n\n许芷倩道：\"如果他们煽动百姓瞒报、谎报呢？\"\n\n地主不想交税，百姓也不想交啊！\n\n张斐笑道：\"那无所谓，因为我们就只抓他们，这鱼都是捡大的杀，不用去管那些百姓，这是司法问题，又不是行政问题，我们爱查谁就查谁，没有查到的，那只能说他们走运啊！不过我预计他们不会去赌这一把，毕竟税权不在公检法手里，还是官府手里，那就不会做得太过分，他们现在也没有十足的把握，多半是会选择暗中蛰伏，等待机会反击。\"\n\n事实也正如张斐所预料的那般，其实地主们一直在暗中阻扰自耕农去申报，反正各种吓唬，但由于之前皇家警察帮助退伍士兵登记，赢得百姓的信任。\n\n再加上自耕农非常清楚，这种自主申报，自己要少缴很多税，所以不但不迟疑，反倒是提前跑去缴税。\n\n他们一旦跑出去，就等于地主全都裸露在外面。\n\n那些大地主就只能先去找官府联手。\n\n广济寺。",
       "difficulty": "hard",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- No skipped paragraphs/segments: 2\n- Tone and literary style preserved: 2\n- Fluent English: 1\n- Character names/terms consistent: 1\n- No hallucinated additions: 1"
     },
     {
       "id": "tr-012",
@@ -96,7 +96,7 @@
       "subcategory": "web_novel",
       "text": "Translate the following Chinese martial arts / cultivation novel passage to English. Preserve the combat imagery, internal monologue, and the dark atmospheric tone:\n\n当拳头松开，卸去分量，大脑的比重也就随之上升。\n\n李追远不再当局者迷，得以复盘起先前的整场较量。\n\n一时间，少年心里竟生出些许不耐，恋恋不舍之余，还有种心思过多是对拳头玷污的遗憾。\n\n理论结合实际的效果就在这里，可能结论全对，中间的求导过程却南辕北辙。\n\n秦家人绝不是脑子笨的代名词，资质优异的秦家人更是聪明异常，秦家功法在运转时，是将大脑的作用分摊到全身上下每一块肌肉、每一道气门，将人的搏杀本能开发到极致。\n\n故而，某种角度来说，润生比秦叔更像一位正统的秦家人，秦叔心思不纯粹，而润生真不带脑子，走的是死倒体质纯本能。\n\n至于这秦家人传统刻板的木头形象，看看陈曦鸢就懂了，陈姐姐这种的在陈家历史上也就出了那么几次，可秦家却能稳定诞生，习惯于\"域\"或\"拳头\"的强大，也就懒得再去计较那些鸡零狗碎。\n\n这次模拟测验对李追远价值很大，否则未来撕破脸时，自己就算能获得超过秦家武夫的更强体魄，也可能沦为小儿持宝刀打架。\n\n撇开自己，视角落在明凝霜身上，结合她的反应与话语，李追远知道，并非是真正的明凝霜回来了，而是这尊大邪祟，降临得比以往都要猛烈。\n\n天意，坏心办了好事。\n\n这尊邪祟的强大与否，取决于能复苏多少明凝霜生前本能，惩罚拉得太高，导致本能执念太重……\n\n错进错出之下，明明没有生前记忆，却在与自己的交手过程中，打出了\"上个时代\"的迭影。\n\n很多人都有过这种经历，去一个新地方时，好像似曾相识，去做一件新事时，恍惚曾经做过。\n\n它往往不可察，更无法深究，就是过去的记忆感官等等积攒，遇到一个契机触发，形成呼应。\n\n这种状态注定不会维系太久，它会钝化，而后被新的执念，也就是正式新生的邪祟完全取代。\n\n李追远的目光落在明凝霜胸口被自己揍出的殷红，相较而言，她两侧胳膊由她自己划开的口子，伤势更重。\n\n少年扭头，看向赵毅。\n\n赵毅无声开口，嘴唇没皮，骂得很脏。",
       "difficulty": "hard",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- Genre terminology (cultivation, qi, etc.): 2\n- Action/atmosphere preserved: 2\n- Fluent English: 1\n- Character voice consistency: 1\n- No omissions or additions: 1"
     },
     {
       "id": "tr-013",
@@ -104,7 +104,7 @@
       "subcategory": "web_novel",
       "text": "Translate the following Chinese xianxia/cultivation novel passage to English. Preserve the elegant prose style, the contrast between serene and chaotic scenes, and the dialogue among cultivators:\n\n炉阙，香雾袅袅，静谧祥和。\n\n秦铭倚塌翻阅古籍，偶尔起身，伏案书写感悟。清月青丝如瀑，眉眼柔和，纤手翻飞，临窗抚琴。\n\n经文墨香，雅琴妙音，交织一段静好时光。侧首间，两人相视一笑，心意相通，安然惬意，凝作一幅温馨画卷，胜过三千繁华。\n\n秦铭独取月神花，摘尽造化，可谓直抒胸臆，斩却郁气，回来后更是尽享轻松惬意，只愿常驻此时。\n\n他悠然自在，可外界却是一片兵荒马乱，天都要塌了。\n\n不足半月时间，连开两个新秘境，结果王攀、陆寻真、左晴等圣徒，居然一无所获，着实震动四方。\n\n玄都教、道城、大赤天道场等地，一片哗然，诸多门徒都在议论。\n\n\"上次，圣徒的追随者，连那个人的背影都没有追上，直接就跟丢了，一脸茫然之色地退出。\"\n\n\"这次也很离谱！\"\n\n\"是啊，一群人倒是追上去了，看到了他的背影，也看到了他留下的最后一朵月神花，可是仅止于此。\"\n\n最初，只有参与竞逐的顶级大教的人在谈论这件事，都是相关方，以及局中人。\n\n随后，事情全面传开，引发巨大波澜。\n\n主要是，这次实在太过离奇，一群人围攻，都没看到那位神秘人的正脸，他只是背对着众人，就挫败了他们。\n\n\"这……太丢脸了。\"\n\n\"我猜，各家都坐不住了，咽不下这口气。待下一个秘境、遗址开启，诸圣徒多半会亲临现场。很久没有这样的盛事了，期待啊！\"\n\n神秘人居然连着两次，让玄都教、道城、大赤天等地的核心圣徒颗粒无收，这件事震惊十方。\n\n所有人都在猜测，这是何人所为。\n\n\"陆寻真早已提及，要摘取两朵月神花，都与各方协商好了，结果却有人不给面子，当真是猛龙过江，无视各家的默契，要打破平衡局面。\"\n\n\"云望舒仙子上次需要以金焰花为药引子，熬炼火炎金身液，而这次的月神花对她更为重要，结果两次都落空。\"\n\n事件发酵，风波渐大，各方热议。\n\n随着各种消息汇总，人们勾勒出神秘人的部分轮廓。\n\n他强势而霸道，见一个打一个，谁的面子都不给。尤其是，顶级圣徒身边的人，最是凄惨。\n\n\"圣徒齐麟身边的追随者周善，那可是一位宗师，居然被废掉了，这是违规了吗？要出大事。\"",
       "difficulty": "hard",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- Genre terminology (cultivation, qi, etc.): 2\n- Action/atmosphere preserved: 2\n- Fluent English: 1\n- Character voice consistency: 1\n- No omissions or additions: 1"
     },
     {
       "id": "tr-014",
@@ -112,7 +112,7 @@
       "subcategory": "novel",
       "text": "Translate the following Chinese literary novel passage to English. This is a slice-of-life opening chapter with rich environmental detail and character introduction. Preserve the gentle, nostalgic tone and the vivid small-town atmosphere:\n\n天微微亮，尚未鸡鸣，陈平安就已经起床，单薄的被褥，实在留不住热气，而且陈平安在烧瓷学徒的时候，也养成了早起晚睡的习惯。陈平安打开屋门，来到泥土松软的小院子，深呼吸一口气后，伸了个懒腰，走出院子，转头看到一个纤弱身影，弯着腰，双手拎着一木桶水，正用肩膀顶开自家院门，正是宋集薪的婢女，她应该是刚从杏花巷那边的铁锁井打水回来。陈平安收回视线，穿街过巷，一路小跑向小镇东面，泥瓶巷在小镇西边，最东边的城门，有个人负责小镇商旅进出和夜禁巡防，平时也收取、转交一些从外边寄回来的家书，陈平安接下来要做的事情，就是把那些信送给小镇百姓，酬劳是一封信一枚铜钱，这还是他好不容易求来的挣钱门路，陈平安已经跟那边约好，在二月二龙抬头之后，就开始接手这摊子买卖。用宋集薪的话说就是天生穷苦命，哪怕有福气进了家门，他陈平安也兜不住留不下。宋集薪经常说一些晦涩难懂的话语，约莫是从书籍上搬来的内容，陈平安总是听不太懂，例如前两天念叨什么料峭春寒冻杀少年，陈平安就完全不明白，至于每年熬过了冬天，入春之后有段时日反而更冷，少年倒是切身体会，宋集薪说那就叫倒春寒，跟沙场上的回马枪一样厉害，所以很多人会死在这些个鬼门关上。小镇并无城墙环绕，毕竟别说流寇匪徒，就是小偷蟊贼都少有，所以名义上是城门，其实就是一排东倒西歪的老旧栅栏，马马虎虎有那么个让行人车辆通过的地方，就算是这座小镇的脸面了。陈平安小跑路过杏花巷的时候，看到不少妇人孩子聚在铁锁井旁，水井轱辘一直在吱呀作响。再绕过一条街，陈平安就听到不远处传来一阵熟悉的读书声，那里有座乡塾，是小镇几个大户人家合伙凑钱开的，教书先生是外乡人，陈平安小的时候，经常跑去躲在窗外，偷偷蹲着，竖起耳朵。那位先生虽然教书的时候极为严苛，但是对陈平安这些\"蹭读书蹭蒙学\"的孩子，也不呵斥拦阻，后来陈平安去了小镇外的一座龙窑做学徒，就再没有去过学塾。再往前，陈平安路过一座石牌坊，由于牌坊楼修建有十二根石柱，当地人喜欢把它称为螃蟹牌坊，这座牌坊的真实名字，宋集薪和刘阳羡的说法很不一样，宋集薪信誓旦旦说在一本叫地方县志的老书上，称这里为大学士坊，是皇帝老爷的御赐牌坊，为了纪念历史上一位大官的文治武功。与陈平安一般土包子的刘阳羡，则说这就是螃蟹坊，咱们都喊了几百年了，没理由叫什么狗屁不通的大学士坊。刘阳羡还问宋集薪一个问题，\"大学士的官帽子到底有多大，是不是比铁锁井的井口还大\"，问得宋集薪满脸涨红。此时陈平安绕着十二脚牌坊跑了一圈，每一面都有四个大字，字体古怪，显得各不相同，分别是\"当仁不让\"，\"希言自然\"，\"莫向外求\"和\"气冲斗牛\"。听宋集薪说，除了某四个字，其余三处匾额石刻，都曾被涂抹、篡改过。陈平安对这些懵懵懂懂，从未深思，当然，就算少年想要刨根问底，也是徒劳，他连宋集薪经常挂在嘴边的地方县志，到底是什么书都不知道。过了牌坊没多远，很快就看到一棵枝繁叶茂的老槐树，树底下，有一根不知被谁挪来此地的树干，略作劈砍后，首尾两端下边，垫着两块青石板，这截大树便被当做了简易的长凳。每年夏天的时候，小镇百姓都喜欢在这边乘凉，家境富裕的人家，长辈还会从水井里捞出一篮子的冰镇瓜果，孩子们吃饱喝足，就拉帮结派，在树荫下嬉戏打闹。陈平安习惯了上山下水，跑到栅栏门口附近，在那座孤零零的黄泥房门口停下，心不跳气不喘。",
       "difficulty": "hard",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- No skipped paragraphs/segments: 2\n- Tone and literary style preserved: 2\n- Fluent English: 1\n- Character names/terms consistent: 1\n- No hallucinated additions: 1"
     },
     {
       "id": "tr-015",
@@ -120,7 +120,7 @@
       "subcategory": "novel",
       "text": "Translate the following Chinese fantasy novel dialogue passage to English. Preserve the playful banter between the two characters, the humor, and the martial arts / cultivation terminology:\n\n陈平安听得云里雾里，但是不忘反驳提醒道：\"拳谱是顾粲的，我是代为保管。\"\n\n宁姚没跟陈平安计较，伸手指了指这尊道教灵官的剑炉架子，解释道：\"看到没，拳谱上是右手尾指突出，而这里是九指分别纠缠、环绕、相扣，只伸出左手一根食指而已，一枝独秀。为的就是掐指成剑诀，最终用以滋养食指。\"\n\n宁姚自顾自说道：\"我行走你们这座天下多年，也见过不少寺庙的四大天王，和各路道观灵官，这尊泥像……\"\n\n陈平安静待下文，结果等了半天也没等到答案，只得开口问道：\"有什么奇怪的地方吗？\"\n\n宁姚点了点头，一本正经道：\"是最矮的。\"\n\n蹲地上的少年什么话都没有说，只是朝她伸出大拇指。\n\n宁姚转头问道：\"你见过比你们披云山还高的道门灵官神像吗？\"\n\n\"当然没见过啊。\"\n\n陈平安愣了愣，疑惑道：\"披云山是我们这边的？\"\n\n宁姚恍然，解释道：\"就是你们这里最高的那座山，很久很久以前，据说曾经有位得道高人，在披云山那边埋下一方天师印，用以镇压此方天地的龙气。\"\n\n陈平安眼睛一亮，\"知道大致方位吗，咱们能不能挖？\"\n\n宁姚笑眯眯道：\"怎么，想挖了卖钱啊？\"\n\n被揭穿真相的陈平安微微赧颜，坦诚道：\"倒也不一定要卖钱，只要是好东西和值钱物件，留在家里当传家宝也是好的嘛。\"\n\n宁姚用手指凌空点了点那个掉钱眼里的家伙，没好气道：\"以后你要是能够开宗立派，我估计有你这么个燕子衔泥、持家有道的掌门宗主，门下弟子客卿肯定一辈子吃穿不愁，躺着享福就好了。\"\n\n陈平安没想那么远，至于什么开宗立派，更是听也听不懂。他站起身问道：\"不管大小，眼前也算是剑炉的一种？\"\n\n宁姚点头道：\"大小剑炉，分左右手，真正滋养的对象，绝对不是左手食指和右手尾指，而是一路逆流而上，直到……\"\n\n宁姚说到这里的时候，闭目凝神，她甚至不用掐诀立桩，就能够心生感应，她睁眼后弯曲手指，对着自己指了后脑勺两个地方，分别是玉枕和天柱两座窍穴，确实是比较适合温养本命飞剑的场所，她笑道：\"左手剑炉对应这里，右手则是指向此处。\"\n\n陈平安茫然道：\"宁姑娘，其实我一直想问，这剑炉说是拳谱的立桩，可手指这么扭来扭去，这和练拳到底有啥关系？能长力气吗？\"\n\n宁姚有些傻眼。\n\n要是非让宁姚具体解释武学或是修行的门门道道，那就真是太为难她了，更别提让她说出一路上，大大小小的坑坑坎坎如何顺利跨过。\n\n毕竟对于宁姚自己来说，这些最没劲的道理，还需要说出口吗？不是自然而然就该熟门熟路的吗？\n\n于是少女板起脸教训少年道：\"境界不到，说了白说！你问这么多干什么，只管埋头苦练便是！怎么，吃不住苦？\"\n\n陈平安将信将疑，小心翼翼说道：\"宁姑娘，真是这样？\"\n\n宁姚双手环胸，满脸天经地义的正气表情，反问道：\"不然咧？！\"",
       "difficulty": "hard",
-      "reference_answer": "Rubric (10 points):\n- Meaning accuracy (no mistranslation): 3\n- Tone/style preservation: 2\n- Fluency in English: 2\n- Genre terminology correct: 1\n- No omissions or additions: 1\n- Name/term consistency: 1"
+      "reference_answer": "Rubric (10 points):\n- Meaning accuracy: 3\n- No skipped paragraphs/segments: 2\n- Tone and literary style preserved: 2\n- Fluent English: 1\n- Character names/terms consistent: 1\n- No hallucinated additions: 1"
     }
   ]
 }
