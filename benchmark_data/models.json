@@ -82,9 +82,8 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
@@ -118,9 +117,8 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
@@ -348,9 +346,8 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
@@ -385,9 +382,8 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
@@ -424,9 +420,8 @@
         "extra_args": [
           "--quantization",
           "awq",
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
@@ -789,9 +784,8 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
@@ -889,9 +883,8 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
@@ -925,9 +918,8 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--enable-reasoning",
           "--reasoning-parser",
-          "deepseek_r1"
+          "qwen3"
         ]
       },
       "benchmark": {
