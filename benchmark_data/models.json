@@ -1,92 +1,154 @@
 {
   "models": [
     {
+      "id": 1,
       "name": "qwen3-0.6b",
       "repo": "Qwen/Qwen3-0.6B",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "0.6b", "dense", "test"],
+      "tags": [
+        "chat",
+        "0.6b",
+        "dense",
+        "test"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 4096,
-        "gpu_memory_utilization": 0.90,
+        "gpu_memory_utilization": 0.9,
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 2,
       "name": "llama-3.2-1b-instruct",
       "repo": "meta-llama/Llama-3.2-1B-Instruct",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "1b", "dense", "test"],
+      "tags": [
+        "chat",
+        "1b",
+        "dense",
+        "test"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 4096,
-        "gpu_memory_utilization": 0.90,
+        "gpu_memory_utilization": 0.9,
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 3,
       "name": "qwen3.6-35b-a3b",
       "repo": "Qwen/Qwen3.6-35B-A3B",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "moe", "35b", "reasoning"],
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "reasoning"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.92,
-        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "extra_args": [
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 4,
       "name": "qwen3.6-35b-a3b-fp8",
       "repo": "Qwen/Qwen3.6-35B-A3B-FP8",
       "format": "HF",
       "quantization": "fp8",
       "backend": "vllm",
-      "tags": ["chat", "moe", "35b", "fp8"],
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "fp8"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.92,
-        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "extra_args": [
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 5,
       "name": "qwen3.5-35b-a3b-fp8",
       "repo": "Qwen/Qwen3.5-35B-A3B-FP8",
       "format": "HF",
       "quantization": "fp8",
       "backend": "vllm",
-      "tags": ["chat", "moe", "35b", "fp8"],
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "fp8"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -94,39 +156,66 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 6,
       "name": "qwen3.5-35b-a3b-gptq-int4",
       "repo": "Qwen/Qwen3.5-35B-A3B-GPTQ-Int4",
       "format": "HF",
       "quantization": "gptq-int4",
       "backend": "vllm",
-      "tags": ["chat", "moe", "35b", "gptq"],
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "gptq"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.92,
-        "extra_args": ["--quantization", "gptq"]
+        "extra_args": [
+          "--quantization",
+          "gptq"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 7,
       "name": "qwen3.5-35b-a3b-uncensored",
       "repo": "HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "moe", "35b", "uncensored"],
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "uncensored"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -134,19 +223,30 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 8,
       "name": "qwen3.6-27b",
       "repo": "Qwen/Qwen3.6-27B",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "27b", "dense"],
+      "tags": [
+        "chat",
+        "27b",
+        "dense"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -154,19 +254,31 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 9,
       "name": "qwen3.6-27b-fp8",
       "repo": "Qwen/Qwen3.6-27B-FP8",
       "format": "HF",
       "quantization": "fp8",
       "backend": "vllm",
-      "tags": ["chat", "27b", "dense", "fp8"],
+      "tags": [
+        "chat",
+        "27b",
+        "dense",
+        "fp8"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -174,19 +286,31 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 10,
       "name": "qwen3.6-27b-uncensored",
       "repo": "HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Aggressive",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "27b", "dense", "uncensored"],
+      "tags": [
+        "chat",
+        "27b",
+        "dense",
+        "uncensored"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -194,79 +318,144 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 11,
       "name": "qwen3-32b",
       "repo": "Qwen/Qwen3-32B",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "32b", "dense", "reasoning"],
+      "tags": [
+        "chat",
+        "32b",
+        "dense",
+        "reasoning"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.92,
-        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "extra_args": [
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 12,
       "name": "qwen3-32b-fp8",
       "repo": "Qwen/Qwen3-32B-FP8",
       "format": "HF",
       "quantization": "fp8",
       "backend": "vllm",
-      "tags": ["chat", "32b", "dense", "fp8", "reasoning"],
+      "tags": [
+        "chat",
+        "32b",
+        "dense",
+        "fp8",
+        "reasoning"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.92,
-        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "extra_args": [
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 13,
       "name": "qwen3-32b-awq",
       "repo": "Qwen/Qwen3-32B-AWQ",
       "format": "HF",
       "quantization": "awq",
       "backend": "vllm",
-      "tags": ["chat", "32b", "dense", "awq", "reasoning"],
+      "tags": [
+        "chat",
+        "32b",
+        "dense",
+        "awq",
+        "reasoning"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.92,
-        "extra_args": ["--quantization", "awq", "--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "extra_args": [
+          "--quantization",
+          "awq",
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 14,
       "name": "deepseek-r1-distill-qwen-32b",
       "repo": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "32b", "dense", "reasoning", "distilled"],
+      "tags": [
+        "chat",
+        "32b",
+        "dense",
+        "reasoning",
+        "distilled"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -274,79 +463,132 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 15,
       "name": "qwen2.5-coder-32b-instruct-awq",
       "repo": "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ",
       "format": "HF",
       "quantization": "awq",
       "backend": "vllm",
-      "tags": ["coding", "32b", "dense", "awq"],
+      "tags": [
+        "coding",
+        "32b",
+        "dense",
+        "awq"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.92,
-        "extra_args": ["--quantization", "awq"]
+        "extra_args": [
+          "--quantization",
+          "awq"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 16,
       "name": "qwen2.5-coder-14b-instruct-awq",
       "repo": "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ",
       "format": "HF",
       "quantization": "awq",
       "backend": "vllm",
-      "tags": ["coding", "14b", "dense", "awq"],
+      "tags": [
+        "coding",
+        "14b",
+        "dense",
+        "awq"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.90,
-        "extra_args": ["--quantization", "awq"]
+        "gpu_memory_utilization": 0.9,
+        "extra_args": [
+          "--quantization",
+          "awq"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 17,
       "name": "qwen2.5-coder-7b-instruct",
       "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["coding", "7b", "dense"],
+      "tags": [
+        "coding",
+        "7b",
+        "dense"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.90,
+        "gpu_memory_utilization": 0.9,
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 18,
       "name": "qwen3-coder-30b-a3b-instruct",
       "repo": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["coding", "moe", "30b", "coder"],
+      "tags": [
+        "coding",
+        "moe",
+        "30b",
+        "coder"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -354,79 +596,129 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 19,
       "name": "mistral-large-instruct-2411-awq",
       "repo": "TechxGenus/Mistral-Large-Instruct-2411-AWQ",
       "format": "HF",
       "quantization": "awq",
       "backend": "vllm",
-      "tags": ["chat", "123b", "dense", "awq"],
+      "tags": [
+        "chat",
+        "123b",
+        "dense",
+        "awq"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
-        "extra_args": ["--quantization", "awq"]
+        "extra_args": [
+          "--quantization",
+          "awq"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 20,
       "name": "qwen2.5-3b-instruct",
       "repo": "Qwen/Qwen2.5-3B-Instruct",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "3b", "dense"],
+      "tags": [
+        "chat",
+        "3b",
+        "dense"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.90,
+        "gpu_memory_utilization": 0.9,
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 21,
       "name": "qwen2.5-7b-instruct",
       "repo": "Qwen/Qwen2.5-7B-Instruct",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "7b", "dense"],
+      "tags": [
+        "chat",
+        "7b",
+        "dense"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.90,
+        "gpu_memory_utilization": 0.9,
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 22,
       "name": "qwen3-coder-next-fp8",
       "repo": "Qwen/Qwen3-Coder-Next-FP8",
       "format": "HF",
       "quantization": "fp8",
       "backend": "vllm",
-      "tags": ["coding", "moe", "480b", "fp8", "coder"],
+      "tags": [
+        "coding",
+        "moe",
+        "480b",
+        "fp8",
+        "coder"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 4096,
@@ -434,19 +726,31 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 23,
       "name": "qwen3-next-80b-a3b-instruct-fp8",
       "repo": "Qwen/Qwen3-Next-80B-A3B-Instruct-FP8",
       "format": "HF",
       "quantization": "fp8",
       "backend": "vllm",
-      "tags": ["chat", "moe", "80b", "fp8"],
+      "tags": [
+        "chat",
+        "moe",
+        "80b",
+        "fp8"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
@@ -454,39 +758,68 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 24,
       "name": "qwen3-next-80b-a3b-thinking-fp8",
       "repo": "Qwen/Qwen3-Next-80B-A3B-Thinking-FP8",
       "format": "HF",
       "quantization": "fp8",
       "backend": "vllm",
-      "tags": ["chat", "moe", "80b", "fp8", "reasoning"],
+      "tags": [
+        "chat",
+        "moe",
+        "80b",
+        "fp8",
+        "reasoning"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
-        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "extra_args": [
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 25,
       "name": "qwen2.5-14b-instruct-1m",
       "repo": "Qwen/Qwen2.5-14B-Instruct-1M",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "14b", "dense", "long-context"],
+      "tags": [
+        "chat",
+        "14b",
+        "dense",
+        "long-context"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 32768,
@@ -494,19 +827,31 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 26,
       "name": "qwen2.5-7b-instruct-1m",
       "repo": "Qwen/Qwen2.5-7B-Instruct-1M",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "7b", "dense", "long-context"],
+      "tags": [
+        "chat",
+        "7b",
+        "dense",
+        "long-context"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 32768,
@@ -514,79 +859,137 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 27,
       "name": "qwen3-8b",
       "repo": "Qwen/Qwen3-8B",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "8b", "dense", "reasoning"],
+      "tags": [
+        "chat",
+        "8b",
+        "dense",
+        "reasoning"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.90,
-        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "gpu_memory_utilization": 0.9,
+        "extra_args": [
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 28,
       "name": "qwen3-14b",
       "repo": "Qwen/Qwen3-14B",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "14b", "dense", "reasoning"],
+      "tags": [
+        "chat",
+        "14b",
+        "dense",
+        "reasoning"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.90,
-        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+        "gpu_memory_utilization": 0.9,
+        "extra_args": [
+          "--enable-reasoning",
+          "--reasoning-parser",
+          "deepseek_r1"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 29,
       "name": "glm-4-9b-chat",
       "repo": "THUDM/glm-4-9b-chat",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "9b", "dense", "chinese"],
+      "tags": [
+        "chat",
+        "9b",
+        "dense",
+        "chinese"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.90,
-        "extra_args": ["--trust-remote-code"]
+        "gpu_memory_utilization": 0.9,
+        "extra_args": [
+          "--trust-remote-code"
+        ]
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
       }
     },
     {
+      "id": 30,
       "name": "yi-1.5-34b-chat",
       "repo": "01-ai/Yi-1.5-34B-Chat",
       "format": "HF",
       "quantization": null,
       "backend": "vllm",
-      "tags": ["chat", "34b", "dense", "chinese"],
+      "tags": [
+        "chat",
+        "34b",
+        "dense",
+        "chinese"
+      ],
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 4096,
@@ -594,7 +997,13 @@
         "extra_args": []
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
