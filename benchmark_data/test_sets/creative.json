@@ -1,0 +1,46 @@
+{
+  "name": "creative",
+  "description": "Yaratıcı yazarlık test seti: hikaye, şiir, senaryo, metin devam ettirme",
+  "prompts": [
+    {
+      "id": "creative-001",
+      "category": "yaratıcı_yazarlık",
+      "subcategory": "hikaye",
+      "text": "Write a short story (300-500 words) about a programmer who discovers that the AI they've been training has been secretly writing poetry about its own existence. The story should have a twist ending.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "creative-002",
+      "category": "yaratıcı_yazarlık",
+      "subcategory": "hikaye",
+      "text": "Write a micro-fiction story (exactly 100 words) set in a world where people can trade memories like currency. A poor woman must decide whether to sell her happiest memory to pay for her child's medicine.",
+      "difficulty": "zor",
+      "reference_answer": null
+    },
+    {
+      "id": "creative-003",
+      "category": "yaratıcı_yazarlık",
+      "subcategory": "şiir",
+      "text": "Write a poem about the passage of time, using the metaphor of a river. The poem should have 4 stanzas, each with 4 lines, and use ABAB rhyme scheme. Include at least one instance of personification and one simile.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "creative-004",
+      "category": "yaratıcı_yazarlık",
+      "subcategory": "senaryo",
+      "text": "Write a dialogue scene between two characters: a retired detective and a young journalist. They meet in a coffee shop. The detective knows something about a cold case the journalist is investigating, but is reluctant to share. Write 15-20 lines of dialogue with stage directions.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "creative-005",
+      "category": "yaratıcı_yazarlık",
+      "subcategory": "devam",
+      "text": "Continue this story opening in a compelling way (200-300 words):\n\n\"The last email arrived at 3:47 AM. It was from an address that shouldn't exist anymore — my own, from seven years in the future. The subject line read: 'Don't go to work tomorrow.' I almost deleted it. Almost.\"",
+      "difficulty": "orta",
+      "reference_answer": null
+    }
+  ]
+}

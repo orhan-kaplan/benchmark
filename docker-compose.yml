@@ -1,0 +1,101 @@
+services:
+  # --- API Gateway (FastAPI) ---
+  api-gateway:
+    build: ./api
+    ports:
+      - "8000:8000"
+    environment:
+      - AUTH_ENABLED=${AUTH_ENABLED:-false}
+      - API_KEYS=${API_KEYS:-}
+      - RATE_LIMIT_RPM=${RATE_LIMIT_RPM:-60}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - MODEL_ENDPOINTS=${MODEL_ENDPOINTS:-model-a:http://vllm-a:8000,model-b:http://vllm-b:8000}
+      - TEST_MODE=${TEST_MODE:-true}
+    volumes:
+      - logs:/app/logs
+    depends_on:
+      vllm-a:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+  # --- vLLM Engine A (primary model) ---
+  vllm-a:
+    image: vllm/vllm-openai:latest
+    command: >
+      --model ${MODEL_NAME_A:-meta-llama/Llama-2-7b-chat-hf}
+      --tensor-parallel-size ${TP_SIZE_A:-1}
+      --max-model-len ${MAX_MODEL_LEN_A:-4096}
+      ${QUANTIZATION_A:+--quantization ${QUANTIZATION_A}}
+    volumes:
+      - model-data:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: ${GPU_COUNT_A:-1}
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    restart: unless-stopped
+
+  # --- vLLM Engine B (optional second model) ---
+  vllm-b:
+    image: vllm/vllm-openai:latest
+    profiles:
+      - multi-model
+    command: >
+      --model ${MODEL_NAME_B:-meta-llama/Llama-2-7b-chat-hf}
+      --tensor-parallel-size ${TP_SIZE_B:-1}
+      --max-model-len ${MAX_MODEL_LEN_B:-4096}
+      ${QUANTIZATION_B:+--quantization ${QUANTIZATION_B}}
+    volumes:
+      - model-data:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: ${GPU_COUNT_B:-1}
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    restart: unless-stopped
+
+  # --- Open WebUI (Chat Interface) ---
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    ports:
+      - "3000:8080"
+    environment:
+      - OPENAI_API_BASE_URL=${OPENAI_API_BASE_URL:-http://api-gateway:8000/v1}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-not-needed}
+      - WEBUI_AUTH=true
+      - ENABLE_OLLAMA_API=false
+    volumes:
+      - open-webui-data:/app/backend/data
+    depends_on:
+      - api-gateway
+    restart: unless-stopped
+
+volumes:
+  model-data:
+    driver: local
+  logs:
+    driver: local
+  open-webui-data:
+    driver: local

@@ -1,0 +1,46 @@
+{
+  "name": "general",
+  "description": "Genel bilgi ve soru-cevap test seti",
+  "prompts": [
+    {
+      "id": "general-001",
+      "category": "genel_bilgi",
+      "subcategory": "bilim",
+      "text": "Explain the difference between nuclear fission and nuclear fusion. Which one powers the sun, and which one is used in nuclear power plants? Why is fusion so difficult to achieve on Earth?",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "general-002",
+      "category": "genel_bilgi",
+      "subcategory": "teknoloji",
+      "text": "Explain how a transformer neural network architecture works. Cover the key concepts: self-attention, multi-head attention, positional encoding, and why transformers replaced RNNs for most NLP tasks. Keep it accessible but technically accurate.",
+      "difficulty": "zor",
+      "reference_answer": null
+    },
+    {
+      "id": "general-003",
+      "category": "genel_bilgi",
+      "subcategory": "tarih",
+      "text": "What were the main causes of the fall of the Roman Empire? Discuss at least 4 factors and explain how they interacted with each other.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "general-004",
+      "category": "genel_bilgi",
+      "subcategory": "felsefe",
+      "text": "Explain the trolley problem and its main variations. Then discuss how a utilitarian, a deontologist, and a virtue ethicist would each approach the problem differently.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "general-005",
+      "category": "genel_bilgi",
+      "subcategory": "pratik",
+      "text": "I'm a beginner who wants to learn machine learning. Create a 3-month study plan with specific resources (books, courses, projects). Assume I know Python but have no ML background. Include weekly milestones.",
+      "difficulty": "orta",
+      "reference_answer": null
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "reasoning",
+  "description": "Muhakeme test seti: matematik, mantık, bilimsel muhakeme, günlük problem çözme",
+  "prompts": [
+    {
+      "id": "reason-001",
+      "category": "muhakeme",
+      "subcategory": "matematik",
+      "text": "A store offers a 20% discount on all items. After the discount, there is an additional 8% sales tax. If the original price of an item is $150, what is the final price? Show your work step by step.",
+      "difficulty": "kolay",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-002",
+      "category": "muhakeme",
+      "subcategory": "matematik",
+      "text": "A ball is dropped from a height of 10 meters. Each time it bounces, it reaches 3/5 of its previous height. What is the total distance the ball travels before it comes to rest? Express your answer as a fraction and as a decimal.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-003",
+      "category": "muhakeme",
+      "subcategory": "matematik",
+      "text": "In a room of 30 people, what is the probability that at least two people share the same birthday? Assume 365 days in a year and uniform distribution. Show the mathematical derivation.",
+      "difficulty": "zor",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-004",
+      "category": "muhakeme",
+      "subcategory": "mantık",
+      "text": "Five friends (Alice, Bob, Carol, Dave, Eve) sit in a row at a movie theater. The following conditions apply:\n1. Alice sits next to Bob\n2. Carol does not sit next to Dave\n3. Eve sits at one of the ends\n4. Bob does not sit at either end\n\nList all possible seating arrangements.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-005",
+      "category": "muhakeme",
+      "subcategory": "mantık",
+      "text": "Three boxes are labeled 'Apples', 'Oranges', and 'Mixed'. Each label is WRONG (no box has the correct label). You can pick one fruit from one box without looking inside. What is the minimum number of fruits you need to pick to correctly label all three boxes? Explain your reasoning step by step.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-006",
+      "category": "muhakeme",
+      "subcategory": "mantık",
+      "text": "A farmer needs to cross a river with a wolf, a goat, and a cabbage. The boat can only carry the farmer and one item at a time. If left alone:\n- The wolf will eat the goat\n- The goat will eat the cabbage\n\nThe farmer can make unlimited trips. What is the minimum number of crossings needed? Describe each step.",
+      "difficulty": "kolay",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-007",
+      "category": "muhakeme",
+      "subcategory": "bilimsel",
+      "text": "If you could somehow remove all the empty space from the atoms in a human body, how large would the remaining matter be? Estimate the size and explain your reasoning using what you know about atomic structure.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-008",
+      "category": "muhakeme",
+      "subcategory": "bilimsel",
+      "text": "Why is the sky blue during the day but red/orange during sunset? Explain the physics behind this phenomenon, including the role of Rayleigh scattering and atmospheric path length.",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-009",
+      "category": "muhakeme",
+      "subcategory": "günlük",
+      "text": "You're planning a road trip of 500 km. Your car gets 8 liters per 100 km in the city and 6 liters per 100 km on the highway. The trip is 30% city driving and 70% highway. Gas costs $1.50 per liter. You also need to account for a 15% increase in fuel consumption because you'll be carrying extra luggage. How much will the fuel cost for the round trip?",
+      "difficulty": "orta",
+      "reference_answer": null
+    },
+    {
+      "id": "reason-010",
+      "category": "muhakeme",
+      "subcategory": "günlük",
+      "text": "You have 8 identical-looking balls. One of them is slightly heavier than the rest. Using a balance scale, what is the minimum number of weighings needed to find the heavier ball? Describe the optimal strategy.",
+      "difficulty": "kolay",
+      "reference_answer": null
+    }
+  ]
+}
