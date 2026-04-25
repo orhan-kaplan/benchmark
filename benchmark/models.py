@@ -36,6 +36,8 @@ class Difficulty(str, Enum):
 class ModelEntry(BaseModel):
     """Tek bir model kaydı."""
 
+    model_config = {"extra": "allow"}
+
     name: str
     repo: str
     format: str
