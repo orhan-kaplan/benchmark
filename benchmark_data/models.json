@@ -219,6 +219,186 @@
         "max_tokens": 1024,
         "top_p": 1.0
       }
+    },
+    {
+      "name": "qwen3-32b",
+      "repo": "Qwen/Qwen3-32B",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "32b", "dense", "reasoning"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen3-32b-fp8",
+      "repo": "Qwen/Qwen3-32B-FP8",
+      "format": "HF",
+      "quantization": "fp8",
+      "backend": "vllm",
+      "tags": ["chat", "32b", "dense", "fp8", "reasoning"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen3-32b-awq",
+      "repo": "Qwen/Qwen3-32B-AWQ",
+      "format": "HF",
+      "quantization": "awq",
+      "backend": "vllm",
+      "tags": ["chat", "32b", "dense", "awq", "reasoning"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": ["--quantization", "awq", "--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "deepseek-r1-distill-qwen-32b",
+      "repo": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "32b", "dense", "reasoning", "distilled"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen2.5-coder-32b-instruct-awq",
+      "repo": "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ",
+      "format": "HF",
+      "quantization": "awq",
+      "backend": "vllm",
+      "tags": ["coding", "32b", "dense", "awq"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": ["--quantization", "awq"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen2.5-coder-14b-instruct-awq",
+      "repo": "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ",
+      "format": "HF",
+      "quantization": "awq",
+      "backend": "vllm",
+      "tags": ["coding", "14b", "dense", "awq"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": ["--quantization", "awq"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen2.5-coder-7b-instruct",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["coding", "7b", "dense"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen3-coder-30b-a3b-instruct",
+      "repo": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["coding", "moe", "30b", "coder"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "mistral-large-instruct-2411-awq",
+      "repo": "TechxGenus/Mistral-Large-Instruct-2411-AWQ",
+      "format": "HF",
+      "quantization": "awq",
+      "backend": "vllm",
+      "tags": ["chat", "123b", "dense", "awq"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.95,
+        "extra_args": ["--quantization", "awq"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     }
   ]
 }
