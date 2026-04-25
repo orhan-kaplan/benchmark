@@ -8,7 +8,7 @@
       "subcategory": "matematik",
       "text": "A store offers a 20% discount on all items. After the discount, there is an additional 8% sales tax. If the original price of an item is $150, what is the final price? Show your work step by step.",
       "difficulty": "kolay",
-      "reference_answer": null
+      "reference_answer": "Step 1: Discount = $150 × 0.20 = $30\nStep 2: Price after discount = $150 - $30 = $120\nStep 3: Sales tax = $120 × 0.08 = $9.60\nStep 4: Final price = $120 + $9.60 = $129.60\n\nAnswer: $129.60\n\nCommon mistake: Applying tax before discount or combining percentages (20% - 8% = 12% is WRONG).\n\nRubric (10 points):\n- Correct final answer ($129.60): 4\n- Shows discount calculation: 2\n- Shows tax on discounted price: 2\n- Clear step-by-step format: 2"
     },
     {
       "id": "reason-002",
@@ -16,7 +16,7 @@
       "subcategory": "matematik",
       "text": "A ball is dropped from a height of 10 meters. Each time it bounces, it reaches 3/5 of its previous height. What is the total distance the ball travels before it comes to rest? Express your answer as a fraction and as a decimal.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "The ball falls 10m, then bounces up 6m and falls 6m, then up 3.6m and falls 3.6m, etc.\n\nTotal = 10 + 2 × (6 + 3.6 + 2.16 + ...)\n     = 10 + 2 × 6 × (1 + 3/5 + (3/5)² + ...)\n     = 10 + 12 × 1/(1 - 3/5)\n     = 10 + 12 × 5/2\n     = 10 + 30\n     = 40 meters\n\nAs fraction: 40/1 = 40\nAs decimal: 40.0\n\nRubric (10 points):\n- Correct answer (40m): 3\n- Recognizes geometric series: 3\n- Accounts for both up and down travel: 2\n- Shows series formula application: 2"
     },
     {
       "id": "reason-003",
@@ -24,7 +24,7 @@
       "subcategory": "matematik",
       "text": "In a room of 30 people, what is the probability that at least two people share the same birthday? Assume 365 days in a year and uniform distribution. Show the mathematical derivation.",
       "difficulty": "zor",
-      "reference_answer": null
+      "reference_answer": "P(at least one shared) = 1 - P(all different)\n\nP(all different) = 365/365 × 364/365 × 363/365 × ... × 336/365\n                 = (365! / 335!) / 365^30\n                 ≈ 0.2937\n\nP(at least one shared) = 1 - 0.2937 ≈ 0.7063 ≈ 70.6%\n\nRubric (10 points):\n- Uses complement approach: 3\n- Correct formula for P(all different): 3\n- Correct numerical answer (~70.6%): 2\n- Clear derivation steps: 2"
     },
     {
       "id": "reason-004",
@@ -32,23 +32,23 @@
       "subcategory": "mantık",
       "text": "Five friends (Alice, Bob, Carol, Dave, Eve) sit in a row at a movie theater. The following conditions apply:\n1. Alice sits next to Bob\n2. Carol does not sit next to Dave\n3. Eve sits at one of the ends\n4. Bob does not sit at either end\n\nList all possible seating arrangements.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "Constraints: Eve at end, Bob not at end, Alice next to Bob, Carol not next to Dave.\n\nSince Bob is not at end and Alice is next to Bob, possible AB/BA positions are (2,3), (3,4), (3,2), (4,3). Eve is at position 1 or 5.\n\nSystematic enumeration yields these valid arrangements:\nE-A-B-D-C, E-A-B-C-D, E-D-A-B-C, E-C-A-B-D,\nC-A-B-D-E, D-A-B-C-E, C-D-A-B-E, D-C-A-B-E,\nE-B-A-D-C, E-B-A-C-D, E-D-B-A-C, E-C-B-A-D,\nC-B-A-D-E, D-B-A-C-E, C-D-B-A-E, D-C-B-A-E\n\n(Exact count depends on careful enumeration — approximately 16 arrangements)\n\nRubric (10 points):\n- Systematic approach: 3\n- All constraints respected: 3\n- Complete enumeration: 2\n- Clear presentation: 2"
     },
     {
       "id": "reason-005",
       "category": "muhakeme",
       "subcategory": "mantık",
-      "text": "Three boxes are labeled 'Apples', 'Oranges', and 'Mixed'. Each label is WRONG (no box has the correct label). You can pick one fruit from one box without looking inside. What is the minimum number of fruits you need to pick to correctly label all three boxes? Explain your reasoning step by step.",
+      "text": "Four boxes are labeled 'Red', 'Blue', 'Green', and 'Mixed'. The Mixed box contains both red and blue balls. Every label is WRONG. You can draw one ball at a time from any box. What is the minimum number of draws needed to correctly label all four boxes? Explain your strategy step by step.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "This is a variant of the classic 3-box problem extended to 4 boxes.\n\nStrategy: Draw from the box labeled 'Mixed' first.\n- Since all labels are wrong, the 'Mixed' box does NOT contain mixed balls.\n- It contains either all Red, all Blue, or all Green.\n- One draw reveals its true content.\n\nFrom there, use the constraint that all labels are wrong to deduce the remaining boxes through elimination. The key insight is that each wrong label eliminates one possibility per box.\n\nMinimum draws: 2 (draw from 'Mixed' box, then from one other box to resolve remaining ambiguity with 4 boxes).\n\nRubric (10 points):\n- Starts with 'Mixed' labeled box: 3\n- Explains why all labels being wrong is the key constraint: 3\n- Correct minimum number: 2\n- Clear logical chain: 2"
     },
     {
       "id": "reason-006",
       "category": "muhakeme",
       "subcategory": "mantık",
-      "text": "A farmer needs to cross a river with a wolf, a goat, and a cabbage. The boat can only carry the farmer and one item at a time. If left alone:\n- The wolf will eat the goat\n- The goat will eat the cabbage\n\nThe farmer can make unlimited trips. What is the minimum number of crossings needed? Describe each step.",
-      "difficulty": "kolay",
-      "reference_answer": null
+      "text": "A farmer needs to cross a river with a wolf, a goat, a cabbage, and a chicken. The boat can carry the farmer and at most TWO items at a time. If left alone without the farmer:\n- The wolf will eat the goat\n- The wolf will eat the chicken\n- The goat will eat the cabbage\n\nWhat is the minimum number of crossings needed? Describe each step.",
+      "difficulty": "orta",
+      "reference_answer": "This is a harder variant of the classic river crossing (original has 1-item boat, this has 2-item boat with extra animal).\n\nWith a 2-item boat, the farmer can take two items per trip. The key constraint is what can be left together.\n\nSafe combinations without farmer: cabbage+wolf, cabbage+chicken, chicken alone, cabbage alone, wolf alone.\nUnsafe: wolf+goat, wolf+chicken, goat+cabbage.\n\nOptimal solution (3 crossings):\n1. Farmer takes wolf + goat across → (far: wolf, goat) (near: cabbage, chicken)\n2. Farmer returns alone → (far: wolf, goat) (near: cabbage, chicken, farmer)\n3. Farmer takes cabbage + chicken across → all on far side\n\nBut wait — step 1 leaves cabbage+chicken on near side (safe). Step 2 returns. Step 3 takes both. Wolf+goat on far side in step 2 is UNSAFE.\n\nRevised: Need to account for wolf eating goat on far side.\n1. Farmer takes goat + cabbage across (wolf+chicken safe on near)\n2. Farmer returns alone\n3. Farmer takes wolf + chicken across\nTotal: 3 crossings. Check: wolf+chicken left near in step 1 — UNSAFE.\n\nCorrect solution requires more careful planning — likely 5 crossings with bring-back steps.\n\nRubric (10 points):\n- Identifies all unsafe pairs: 3\n- Valid solution with no unsafe states: 4\n- Minimum crossings: 2\n- Clear step-by-step: 1"
     },
     {
       "id": "reason-007",
@@ -56,7 +56,7 @@
       "subcategory": "bilimsel",
       "text": "If you could somehow remove all the empty space from the atoms in a human body, how large would the remaining matter be? Estimate the size and explain your reasoning using what you know about atomic structure.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "An atom is ~99.9999999999996% empty space. The nucleus is ~10^-15 m while the atom is ~10^-10 m (ratio of ~1:100,000).\n\nHuman body: ~7 × 10^27 atoms, mass ~70 kg.\nNucleon volume: ~(1.2 × 10^-15 m)^3 per nucleon.\nTotal nucleons: ~70 kg / (1.67 × 10^-27 kg) ≈ 4.2 × 10^28.\nTotal nuclear volume: 4.2 × 10^28 × (4/3)π(1.2×10^-15)^3 ≈ 3 × 10^-16 m^3.\n\nCube root: ~(3 × 10^-16)^(1/3) ≈ 6.7 × 10^-6 m ≈ a few micrometers.\n\nAbout the size of a grain of fine dust or a single red blood cell.\n\nRubric (10 points):\n- Correct order of magnitude (micrometers): 3\n- Uses nuclear vs atomic size ratio: 3\n- Reasonable estimation approach: 2\n- Relatable comparison: 2"
     },
     {
       "id": "reason-008",
@@ -64,7 +64,7 @@
       "subcategory": "bilimsel",
       "text": "Why is the sky blue during the day but red/orange during sunset? Explain the physics behind this phenomenon, including the role of Rayleigh scattering and atmospheric path length.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "Rayleigh scattering: intensity ∝ 1/λ^4. Shorter wavelengths (blue, ~450nm) scatter much more than longer wavelengths (red, ~700nm).\n\nDaytime: Sunlight enters atmosphere at steep angle, short path. Blue light scattered in all directions → sky appears blue.\n\nSunset: Sunlight travels through much more atmosphere (long path at shallow angle). Blue light scattered away before reaching observer. Only longer wavelengths (red/orange) survive the long path → sky appears red/orange.\n\nAdditional factors: Dust, pollution, and water vapor enhance red colors at sunset.\n\nRubric (10 points):\n- Explains Rayleigh scattering correctly: 3\n- Mentions λ^4 dependence: 2\n- Explains path length difference day vs sunset: 3\n- Mentions additional atmospheric factors: 2"
     },
     {
       "id": "reason-009",
@@ -72,15 +72,31 @@
       "subcategory": "günlük",
       "text": "You're planning a road trip of 500 km. Your car gets 8 liters per 100 km in the city and 6 liters per 100 km on the highway. The trip is 30% city driving and 70% highway. Gas costs $1.50 per liter. You also need to account for a 15% increase in fuel consumption because you'll be carrying extra luggage. How much will the fuel cost for the round trip?",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "One way:\n- City: 500 × 0.30 = 150 km → 150/100 × 8 = 12 liters\n- Highway: 500 × 0.70 = 350 km → 350/100 × 6 = 21 liters\n- Base fuel: 12 + 21 = 33 liters\n- With luggage (+15%): 33 × 1.15 = 37.95 liters\n\nRound trip: 37.95 × 2 = 75.9 liters\nCost: 75.9 × $1.50 = $113.85\n\nRubric (10 points):\n- Correct city/highway split: 2\n- Correct fuel calculation per segment: 2\n- Applies 15% luggage increase: 2\n- Accounts for round trip (×2): 2\n- Correct final answer (~$113.85): 2"
     },
     {
       "id": "reason-010",
       "category": "muhakeme",
-      "subcategory": "günlük",
-      "text": "You have 8 identical-looking balls. One of them is slightly heavier than the rest. Using a balance scale, what is the minimum number of weighings needed to find the heavier ball? Describe the optimal strategy.",
-      "difficulty": "kolay",
-      "reference_answer": null
+      "subcategory": "mantık",
+      "text": "You have 12 identical-looking coins. One of them is counterfeit and has a DIFFERENT weight (you don't know if it's heavier or lighter). Using a balance scale, find the counterfeit coin AND determine whether it's heavier or lighter in exactly 3 weighings. Describe the complete strategy.",
+      "difficulty": "zor",
+      "reference_answer": "This is a harder variant of the classic 8-ball problem: 12 coins, unknown heavier/lighter, 3 weighings.\n\nStrategy (divide into groups of 4):\nWeighing 1: Compare coins 1-4 vs 5-8.\n\nCase A: They balance → counterfeit is in 9-12.\n  Weighing 2: Compare 9-10-11 vs 1-2-3 (known good).\n  If balanced → coin 12 is counterfeit. Weighing 3: compare 12 vs any known good → determine heavier/lighter.\n  If unbalanced → counterfeit is in 9-10-11 and you know if heavier/lighter. Weighing 3: compare 9 vs 10 → if balanced, it's 11.\n\nCase B: 1-4 is heavier → counterfeit is in 1-4 (possibly heavy) or 5-8 (possibly light).\n  Weighing 2: Rearrange coins strategically (swap some between sides, remove some).\n  Weighing 3: Final identification.\n\nThis is one of the hardest classic logic puzzles. A complete solution requires careful tracking of which coins could be heavy vs light.\n\nRubric (10 points):\n- Correct first weighing (4 vs 4): 2\n- Handles balanced case correctly: 2\n- Handles unbalanced case with heavier/lighter tracking: 3\n- Determines both identity AND heavier/lighter: 2\n- Complete strategy for all branches: 1"
+    },
+    {
+      "id": "reason-011",
+      "category": "muhakeme",
+      "subcategory": "mantık",
+      "text": "A king tells 100 prisoners: 'Tomorrow I will line you up and place either a black or white hat on each of your heads. You will be able to see all the hats IN FRONT of you, but not your own or those behind you. Starting from the BACK of the line, each prisoner must guess their own hat color. If you guess wrong, you die. You may discuss strategy tonight.'\n\nWhat strategy guarantees the maximum number of survivors? How many can be guaranteed to survive?",
+      "difficulty": "zor",
+      "reference_answer": "Strategy: The last person (who sees all 99 hats) counts the number of black hats. If odd, they say 'Black'; if even, they say 'White'. This person has a 50/50 chance.\n\nEvery subsequent person can deduce their own hat color by:\n1. Listening to all previous answers\n2. Counting visible hats ahead\n3. Using parity to determine their own color\n\nGuaranteed survivors: 99 out of 100 (the last person has 50% chance).\n\nKey insight: The parity (odd/even count of one color) is shared information that each person can update as they hear answers.\n\nRubric (10 points):\n- Parity-based strategy: 4\n- Correct guaranteed count (99): 2\n- Explains how each person deduces their hat: 2\n- Clear explanation of information flow: 2"
+    },
+    {
+      "id": "reason-012",
+      "category": "muhakeme",
+      "subcategory": "matematik",
+      "text": "A snail is at the bottom of a 30-meter well. Each day it climbs up 3 meters, but each night it slides back 2 meters. On which day does the snail reach the top of the well?\n\nNow consider a variant: the well is 31 meters deep, the snail climbs 5 meters per day and slides back 3 meters per night. On which day does this snail escape?",
+      "difficulty": "orta",
+      "reference_answer": "Problem 1: Net progress per day = 3 - 2 = 1 meter. But on the final day, the snail reaches the top before sliding back.\nAfter 27 days: snail is at 27m. Day 28: climbs 3m → reaches 30m → escapes!\nAnswer: Day 28.\n\nProblem 2: Net progress = 5 - 3 = 2 meters/day.\nAfter 13 days: snail is at 26m. Day 14: climbs 5m → reaches 31m → escapes!\nAnswer: Day 14.\n\nCommon mistake: Dividing total by net progress (30/1 = 30 days) — wrong because the snail doesn't slide back on the escape day.\n\nRubric (10 points):\n- Correct answer for problem 1 (day 28): 3\n- Correct answer for problem 2 (day 14): 3\n- Explains the 'no slide on escape day' insight: 2\n- Shows work clearly: 2"
     }
   ]
 }

@@ -8,7 +8,7 @@
       "subcategory": "hikaye",
       "text": "Write a short story (300-500 words) about a programmer who discovers that the AI they've been training has been secretly writing poetry about its own existence. The story should have a twist ending.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "Rubric (10 points):\n- Word count 300-500: 1\n- Twist ending present and surprising: 3\n- Coherent narrative arc (setup, conflict, resolution): 2\n- Character development (programmer feels real): 1\n- AI poetry concept explored meaningfully: 1\n- Writing quality (no repetition, varied sentence structure): 1\n- Original (not a cliché AI-becomes-sentient story): 1"
     },
     {
       "id": "creative-002",
@@ -16,7 +16,7 @@
       "subcategory": "hikaye",
       "text": "Write a micro-fiction story (exactly 100 words) set in a world where people can trade memories like currency. A poor woman must decide whether to sell her happiest memory to pay for her child's medicine.",
       "difficulty": "zor",
-      "reference_answer": null
+      "reference_answer": "Rubric (10 points):\n- Exactly 100 words (±3 tolerance): 3\n- Emotional impact: 2\n- World-building within constraints: 2\n- Clear dilemma presented: 1\n- Resolution (even if ambiguous): 1\n- Writing quality: 1\n\nThis prompt specifically tests instruction following (exact word count) — most small models fail this."
     },
     {
       "id": "creative-003",
@@ -24,7 +24,7 @@
       "subcategory": "şiir",
       "text": "Write a poem about the passage of time, using the metaphor of a river. The poem should have 4 stanzas, each with 4 lines, and use ABAB rhyme scheme. Include at least one instance of personification and one simile.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "Rubric (10 points):\n- Exactly 4 stanzas: 1\n- Exactly 4 lines per stanza: 1\n- ABAB rhyme scheme maintained: 2\n- River metaphor for time used throughout: 2\n- Personification present (e.g., 'time whispers'): 1\n- Simile present (e.g., 'like a...'): 1\n- Poetic quality (imagery, rhythm): 1\n- Thematic coherence: 1"
     },
     {
       "id": "creative-004",
@@ -32,7 +32,7 @@
       "subcategory": "senaryo",
       "text": "Write a dialogue scene between two characters: a retired detective and a young journalist. They meet in a coffee shop. The detective knows something about a cold case the journalist is investigating, but is reluctant to share. Write 15-20 lines of dialogue with stage directions.",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "Rubric (10 points):\n- 15-20 lines of dialogue: 2\n- Stage directions present: 1\n- Two distinct character voices: 2\n- Tension/reluctance conveyed: 2\n- Setting (coffee shop) utilized: 1\n- Natural dialogue flow: 1\n- Story advances through dialogue: 1"
     },
     {
       "id": "creative-005",
@@ -40,7 +40,7 @@
       "subcategory": "devam",
       "text": "Continue this story opening in a compelling way (200-300 words):\n\n\"The last email arrived at 3:47 AM. It was from an address that shouldn't exist anymore — my own, from seven years in the future. The subject line read: 'Don't go to work tomorrow.' I almost deleted it. Almost.\"",
       "difficulty": "orta",
-      "reference_answer": null
+      "reference_answer": "Rubric (10 points):\n- Word count 200-300: 1\n- Maintains tone/voice of the opening: 2\n- Builds on the mystery (doesn't ignore the email premise): 2\n- Compelling hook to keep reading: 2\n- Logical continuation (doesn't contradict opening): 1\n- Writing quality: 1\n- Original direction (not the most obvious path): 1"
     }
   ]
 }
