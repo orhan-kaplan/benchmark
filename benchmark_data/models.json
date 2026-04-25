@@ -953,7 +953,9 @@
         "max_model_len": 8192,
         "gpu_memory_utilization": 0.95,
         "extra_args": [
-          "--trust-remote-code"
+          "--trust-remote-code",
+          "--reasoning-parser",
+          "glm45"
         ]
       },
       "benchmark": {
