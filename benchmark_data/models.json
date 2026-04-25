@@ -201,26 +201,6 @@
       }
     },
     {
-      "name": "qwen3.6-35b-a3b-claude-distilled-gguf",
-      "repo": "hesamation/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GGUF",
-      "format": "GGUF",
-      "quantization": null,
-      "backend": "vllm",
-      "tags": ["chat", "moe", "35b", "distilled", "reasoning", "gguf"],
-      "api_endpoint": "",
-      "vllm": {
-        "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
-        "extra_args": []
-      },
-      "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
-        "temperature": 0.7,
-        "max_tokens": 1024,
-        "top_p": 1.0
-      }
-    },
-    {
       "name": "qwen3-32b",
       "repo": "Qwen/Qwen3-32B",
       "format": "HF",
