@@ -16,7 +16,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 4096,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -48,7 +48,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 4096,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -80,7 +80,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--enable-reasoning",
           "--reasoning-parser",
@@ -116,7 +116,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--enable-reasoning",
           "--reasoning-parser",
@@ -152,7 +152,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -184,7 +184,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--quantization",
           "gptq"
@@ -219,7 +219,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -250,7 +250,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -282,7 +282,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -314,7 +314,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -346,7 +346,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--enable-reasoning",
           "--reasoning-parser",
@@ -383,7 +383,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--enable-reasoning",
           "--reasoning-parser",
@@ -420,7 +420,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--quantization",
           "awq",
@@ -459,7 +459,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -491,7 +491,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--quantization",
           "awq"
@@ -526,7 +526,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--quantization",
           "awq"
@@ -560,7 +560,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -592,7 +592,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -658,7 +658,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -689,7 +689,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -823,7 +823,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 32768,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -855,7 +855,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 32768,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
@@ -887,7 +887,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--enable-reasoning",
           "--reasoning-parser",
@@ -923,7 +923,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--enable-reasoning",
           "--reasoning-parser",
@@ -959,7 +959,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.9,
+        "gpu_memory_utilization": 0.95,
         "extra_args": [
           "--trust-remote-code"
         ]
@@ -993,7 +993,7 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 4096,
-        "gpu_memory_utilization": 0.92,
+        "gpu_memory_utilization": 0.95,
         "extra_args": []
       },
       "benchmark": {
