@@ -519,6 +519,86 @@
         "max_tokens": 1024,
         "top_p": 1.0
       }
+    },
+    {
+      "name": "qwen3-8b",
+      "repo": "Qwen/Qwen3-8B",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "8b", "dense", "reasoning"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "qwen3-14b",
+      "repo": "Qwen/Qwen3-14B",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "14b", "dense", "reasoning"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "glm-4-9b-chat",
+      "repo": "THUDM/glm-4-9b-chat",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "9b", "dense", "chinese"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": ["--trust-remote-code"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "name": "yi-1.5-34b-chat",
+      "repo": "01-ai/Yi-1.5-34B-Chat",
+      "format": "HF",
+      "quantization": null,
+      "backend": "vllm",
+      "tags": ["chat", "34b", "dense", "chinese"],
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 4096,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     }
   ]
 }
