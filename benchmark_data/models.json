@@ -7,7 +7,18 @@
       "quantization": null,
       "backend": "vllm",
       "tags": ["chat", "0.6b", "dense", "test"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 4096,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "llama-3.2-1b-instruct",
@@ -16,7 +27,18 @@
       "quantization": null,
       "backend": "vllm",
       "tags": ["chat", "1b", "dense", "test"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 4096,
+        "gpu_memory_utilization": 0.90,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.6-35b-a3b",
@@ -25,7 +47,18 @@
       "quantization": null,
       "backend": "vllm",
       "tags": ["chat", "moe", "35b", "reasoning"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.6-35b-a3b-fp8",
@@ -34,7 +67,18 @@
       "quantization": "fp8",
       "backend": "vllm",
       "tags": ["chat", "moe", "35b", "fp8"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": ["--enable-reasoning", "--reasoning-parser", "deepseek_r1"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.5-35b-a3b-fp8",
@@ -43,7 +87,18 @@
       "quantization": "fp8",
       "backend": "vllm",
       "tags": ["chat", "moe", "35b", "fp8"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.5-35b-a3b-gptq-int4",
@@ -52,7 +107,18 @@
       "quantization": "gptq-int4",
       "backend": "vllm",
       "tags": ["chat", "moe", "35b", "gptq"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": ["--quantization", "gptq"]
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.5-35b-a3b-uncensored",
@@ -61,7 +127,18 @@
       "quantization": null,
       "backend": "vllm",
       "tags": ["chat", "moe", "35b", "uncensored"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.6-27b",
@@ -70,7 +147,18 @@
       "quantization": null,
       "backend": "vllm",
       "tags": ["chat", "27b", "dense"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.6-27b-fp8",
@@ -79,7 +167,18 @@
       "quantization": "fp8",
       "backend": "vllm",
       "tags": ["chat", "27b", "dense", "fp8"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.6-27b-uncensored",
@@ -88,7 +187,18 @@
       "quantization": null,
       "backend": "vllm",
       "tags": ["chat", "27b", "dense", "uncensored"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     },
     {
       "name": "qwen3.6-35b-a3b-claude-distilled-gguf",
@@ -97,7 +207,18 @@
       "quantization": null,
       "backend": "vllm",
       "tags": ["chat", "moe", "35b", "distilled", "reasoning", "gguf"],
-      "api_endpoint": ""
+      "api_endpoint": "",
+      "vllm": {
+        "max_model_len": 8192,
+        "gpu_memory_utilization": 0.92,
+        "extra_args": []
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
     }
   ]
 }
