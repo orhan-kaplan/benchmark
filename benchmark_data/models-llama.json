@@ -2,11 +2,11 @@
   "models": [
     {
       "id": 1,
-      "name": "qwen3.5-35b-uncensored-q4",
+      "name": "qwen3.5-35b-uncensored-bf16",
       "hf_repo": "HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive",
-      "gguf_file": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf",
+      "gguf_file": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-BF16.gguf",
       "format": "GGUF",
-      "quantization": "Q4_K_M",
+      "quantization": "BF16",
       "backend": "llama_cpp",
       "tags": [
         "chat",
@@ -35,11 +35,11 @@
     },
     {
       "id": 2,
-      "name": "qwen3.6-27b-uncensored-q4",
+      "name": "qwen3.6-27b-uncensored-q8",
       "hf_repo": "HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Aggressive",
-      "gguf_file": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf",
+      "gguf_file": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf",
       "format": "GGUF",
-      "quantization": "Q4_K_M",
+      "quantization": "Q8_K_P",
       "backend": "llama_cpp",
       "tags": [
         "chat",
@@ -68,11 +68,11 @@
     },
     {
       "id": 3,
-      "name": "qwen3.6-35b-claude-distilled-q4",
+      "name": "qwen3.6-35b-claude-distilled-q8",
       "hf_repo": "hesamation/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GGUF",
-      "gguf_file": "Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-Q4_K_M.gguf",
+      "gguf_file": "Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled.Q8_0.gguf",
       "format": "GGUF",
-      "quantization": "Q4_K_M",
+      "quantization": "Q8_0",
       "backend": "llama_cpp",
       "tags": [
         "chat",
@@ -102,11 +102,11 @@
     },
     {
       "id": 4,
-      "name": "deepseek-r1-distill-llama-70b-abliterated-q4",
+      "name": "deepseek-r1-distill-llama-70b-abliterated-q8",
       "hf_repo": "bartowski/huihui-ai_DeepSeek-R1-Distill-Llama-70B-abliterated-GGUF",
-      "gguf_file": "huihui-ai_DeepSeek-R1-Distill-Llama-70B-abliterated-Q4_K_M.gguf",
+      "gguf_file": "huihui-ai_DeepSeek-R1-Distill-Llama-70B-abliterated-Q8_0-00001-of-00002.gguf",
       "format": "GGUF",
-      "quantization": "Q4_K_M",
+      "quantization": "Q8_0",
       "backend": "llama_cpp",
       "tags": [
         "chat",
@@ -132,42 +132,11 @@
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
-      }
+      },
+      "gguf_split": true
     },
     {
       "id": 5,
-      "name": "mistral-large-2411-q4",
-      "hf_repo": "MaziyarPanahi/Mistral-Large-Instruct-2411-GGUF",
-      "gguf_file": "Mistral-Large-Instruct-2411.Q4_K_M.gguf",
-      "format": "GGUF",
-      "quantization": "Q4_K_M",
-      "backend": "llama_cpp",
-      "tags": [
-        "chat",
-        "123b",
-        "dense",
-        "gguf"
-      ],
-      "api_endpoint": "",
-      "llama": {
-        "n_gpu_layers": -1,
-        "n_ctx": 4096
-      },
-      "benchmark": {
-        "test_sets": [
-          "coding",
-          "translation",
-          "reasoning",
-          "creative",
-          "general"
-        ],
-        "temperature": 0.7,
-        "max_tokens": 1024,
-        "top_p": 1.0
-      }
-    },
-    {
-      "id": 6,
       "name": "qwen3.6-35b-uncensored-q8",
       "hf_repo": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
       "gguf_file": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf",
