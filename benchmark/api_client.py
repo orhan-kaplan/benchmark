@@ -76,7 +76,15 @@ class APIClient:
                 choices = data.get("choices", [])
                 if choices:
                     msg = choices[0].get("message", {})
-                    response_text = msg.get("content") or msg.get("reasoning") or msg.get("reasoning_content")
+                    content = msg.get("content")
+                    reasoning = msg.get("reasoning") or msg.get("reasoning_content")
+                    # Birleştir: reasoning varsa önce onu, sonra content'i ekle
+                    parts = []
+                    if reasoning:
+                        parts.append(reasoning)
+                    if content:
+                        parts.append(content)
+                    response_text = "\n".join(parts) if parts else None
 
                 # Usage bilgisi
                 usage = data.get("usage")
