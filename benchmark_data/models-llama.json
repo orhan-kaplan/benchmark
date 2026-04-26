@@ -29,7 +29,6 @@
           "general"
         ],
         "temperature": 0.7,
-        "max_tokens": 12288,
         "top_p": 1.0
       }
     },
@@ -62,7 +61,6 @@
           "general"
         ],
         "temperature": 0.7,
-        "max_tokens": 12288,
         "top_p": 1.0
       }
     },
@@ -96,7 +94,6 @@
           "general"
         ],
         "temperature": 0.7,
-        "max_tokens": 12288,
         "top_p": 1.0
       }
     },
@@ -130,7 +127,6 @@
           "general"
         ],
         "temperature": 0.7,
-        "max_tokens": 12288,
         "top_p": 1.0
       },
       "gguf_split": true
@@ -164,7 +160,6 @@
           "general"
         ],
         "temperature": 0.7,
-        "max_tokens": 12288,
         "top_p": 1.0
       }
     }
