@@ -76,7 +76,7 @@ class APIClient:
                 choices = data.get("choices", [])
                 if choices:
                     msg = choices[0].get("message", {})
-                    response_text = msg.get("content") or msg.get("reasoning_content")
+                    response_text = msg.get("content") or msg.get("reasoning") or msg.get("reasoning_content")
 
                 # Usage bilgisi
                 usage = data.get("usage")
