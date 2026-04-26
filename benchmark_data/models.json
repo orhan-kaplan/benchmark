@@ -354,12 +354,14 @@
       "api_endpoint": "",
       "vllm": {
         "max_model_len": 8192,
-        "gpu_memory_utilization": 0.98,
+        "gpu_memory_utilization": 0.9,
         "extra_args": [
           "--quantization",
           "awq",
           "--reasoning-parser",
-          "qwen3"
+          "qwen3",
+          "--max-num-seqs",
+          "64"
         ]
       },
       "benchmark": {
