@@ -185,7 +185,9 @@
         "gpu_memory_utilization": 0.98,
         "extra_args": [
           "--quantization",
-          "gptq"
+          "gptq",
+          "--dtype",
+          "float16"
         ]
       },
       "benchmark": {
