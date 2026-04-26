@@ -8,14 +8,26 @@
       "format": "GGUF",
       "quantization": "Q4_K_M",
       "backend": "llama_cpp",
-      "tags": ["chat", "moe", "35b", "uncensored", "gguf"],
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "uncensored",
+        "gguf"
+      ],
       "api_endpoint": "",
       "llama": {
         "n_gpu_layers": -1,
         "n_ctx": 8192
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
@@ -29,14 +41,26 @@
       "format": "GGUF",
       "quantization": "Q4_K_M",
       "backend": "llama_cpp",
-      "tags": ["chat", "27b", "dense", "uncensored", "gguf"],
+      "tags": [
+        "chat",
+        "27b",
+        "dense",
+        "uncensored",
+        "gguf"
+      ],
       "api_endpoint": "",
       "llama": {
         "n_gpu_layers": -1,
         "n_ctx": 8192
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
@@ -50,14 +74,27 @@
       "format": "GGUF",
       "quantization": "Q4_K_M",
       "backend": "llama_cpp",
-      "tags": ["chat", "moe", "35b", "distilled", "reasoning", "gguf"],
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "distilled",
+        "reasoning",
+        "gguf"
+      ],
       "api_endpoint": "",
       "llama": {
         "n_gpu_layers": -1,
         "n_ctx": 8192
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
@@ -71,14 +108,27 @@
       "format": "GGUF",
       "quantization": "Q4_K_M",
       "backend": "llama_cpp",
-      "tags": ["chat", "70b", "dense", "reasoning", "abliterated", "gguf"],
+      "tags": [
+        "chat",
+        "70b",
+        "dense",
+        "reasoning",
+        "abliterated",
+        "gguf"
+      ],
       "api_endpoint": "",
       "llama": {
         "n_gpu_layers": -1,
         "n_ctx": 4096
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
@@ -92,14 +142,58 @@
       "format": "GGUF",
       "quantization": "Q4_K_M",
       "backend": "llama_cpp",
-      "tags": ["chat", "123b", "dense", "gguf"],
+      "tags": [
+        "chat",
+        "123b",
+        "dense",
+        "gguf"
+      ],
       "api_endpoint": "",
       "llama": {
         "n_gpu_layers": -1,
         "n_ctx": 4096
       },
       "benchmark": {
-        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "id": 6,
+      "name": "qwen3.6-35b-uncensored-q8",
+      "hf_repo": "HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive",
+      "gguf_file": "Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-Q8_K_P.gguf",
+      "format": "GGUF",
+      "quantization": "Q8_K_P",
+      "backend": "llama_cpp",
+      "tags": [
+        "chat",
+        "moe",
+        "35b",
+        "uncensored",
+        "gguf"
+      ],
+      "api_endpoint": "",
+      "llama": {
+        "n_gpu_layers": -1,
+        "n_ctx": 8192
+      },
+      "benchmark": {
+        "test_sets": [
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
+        ],
         "temperature": 0.7,
         "max_tokens": 1024,
         "top_p": 1.0
