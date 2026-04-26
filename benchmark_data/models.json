@@ -155,8 +155,11 @@
       },
       "benchmark": {
         "test_sets": [
-          "coding"
-          
+          "coding",
+          "translation",
+          "reasoning",
+          "creative",
+          "general"
         ],
         "temperature": 0.7,
         "max_tokens": 4096,
