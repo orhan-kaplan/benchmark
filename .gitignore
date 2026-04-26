@@ -29,8 +29,13 @@ Thumbs.db
 # Sample benchmarks (reference only, not part of project)
 sample-benchmark/
 
-# Benchmark runs (sonuçlar büyük olabilir, opsiyonel)
-# benchmark_data/runs/
+# Benchmark runs (sonuçlar büyük, local'de kalır)
+benchmark_data/runs/*
+!benchmark_data/runs/.gitkeep
+
+# Temp eval scripts
+_*.py
+_*.json
 
 # Logs
 logs/
