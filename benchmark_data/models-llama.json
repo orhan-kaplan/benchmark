@@ -1,0 +1,109 @@
+{
+  "models": [
+    {
+      "id": 1,
+      "name": "qwen3.5-35b-uncensored-q4",
+      "hf_repo": "HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive",
+      "gguf_file": "Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf",
+      "format": "GGUF",
+      "quantization": "Q4_K_M",
+      "backend": "llama_cpp",
+      "tags": ["chat", "moe", "35b", "uncensored", "gguf"],
+      "api_endpoint": "",
+      "llama": {
+        "n_gpu_layers": -1,
+        "n_ctx": 8192
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "id": 2,
+      "name": "qwen3.6-27b-uncensored-q4",
+      "hf_repo": "HauhauCS/Qwen3.6-27B-Uncensored-HauhauCS-Aggressive",
+      "gguf_file": "Qwen3.6-27B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf",
+      "format": "GGUF",
+      "quantization": "Q4_K_M",
+      "backend": "llama_cpp",
+      "tags": ["chat", "27b", "dense", "uncensored", "gguf"],
+      "api_endpoint": "",
+      "llama": {
+        "n_gpu_layers": -1,
+        "n_ctx": 8192
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "id": 3,
+      "name": "qwen3.6-35b-claude-distilled-q4",
+      "hf_repo": "hesamation/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GGUF",
+      "gguf_file": "Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-Q4_K_M.gguf",
+      "format": "GGUF",
+      "quantization": "Q4_K_M",
+      "backend": "llama_cpp",
+      "tags": ["chat", "moe", "35b", "distilled", "reasoning", "gguf"],
+      "api_endpoint": "",
+      "llama": {
+        "n_gpu_layers": -1,
+        "n_ctx": 8192
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "id": 4,
+      "name": "deepseek-r1-distill-llama-70b-abliterated-q4",
+      "hf_repo": "bartowski/huihui-ai_DeepSeek-R1-Distill-Llama-70B-abliterated-GGUF",
+      "gguf_file": "huihui-ai_DeepSeek-R1-Distill-Llama-70B-abliterated-Q4_K_M.gguf",
+      "format": "GGUF",
+      "quantization": "Q4_K_M",
+      "backend": "llama_cpp",
+      "tags": ["chat", "70b", "dense", "reasoning", "abliterated", "gguf"],
+      "api_endpoint": "",
+      "llama": {
+        "n_gpu_layers": -1,
+        "n_ctx": 4096
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    },
+    {
+      "id": 5,
+      "name": "mistral-large-2411-q4",
+      "hf_repo": "MaziyarPanahi/Mistral-Large-Instruct-2411-GGUF",
+      "gguf_file": "Mistral-Large-Instruct-2411.Q4_K_M.gguf",
+      "format": "GGUF",
+      "quantization": "Q4_K_M",
+      "backend": "llama_cpp",
+      "tags": ["chat", "123b", "dense", "gguf"],
+      "api_endpoint": "",
+      "llama": {
+        "n_gpu_layers": -1,
+        "n_ctx": 4096
+      },
+      "benchmark": {
+        "test_sets": ["coding", "translation", "reasoning", "creative", "general"],
+        "temperature": 0.7,
+        "max_tokens": 1024,
+        "top_p": 1.0
+      }
+    }
+  ]
+}
