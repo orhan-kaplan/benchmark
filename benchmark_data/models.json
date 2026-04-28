@@ -213,7 +213,10 @@
       "vllm": {
         "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
-        "extra_args": []
+        "extra_args": [
+          "--max-num-seqs",
+          "512"
+        ]
       },
       "benchmark": {
         "test_sets": [
@@ -244,7 +247,10 @@
       "vllm": {
         "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
-        "extra_args": []
+        "extra_args": [
+          "--max-num-seqs",
+          "512"
+        ]
       },
       "benchmark": {
         "test_sets": [
