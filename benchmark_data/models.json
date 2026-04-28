@@ -211,7 +211,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": []
       },
@@ -242,7 +242,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": []
       },
@@ -273,7 +273,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": [
           "--reasoning-parser",
@@ -308,7 +308,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": [
           "--reasoning-parser",
@@ -343,7 +343,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.9,
         "extra_args": [
           "--quantization",
@@ -382,7 +382,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": []
       },
@@ -413,7 +413,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": [
           "--quantization",
@@ -542,7 +542,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": [
           "--quantization",
@@ -897,7 +897,7 @@
       ],
       "api_endpoint": "",
       "vllm": {
-        "max_model_len": 65536,
+        "max_model_len": 32768,
         "gpu_memory_utilization": 0.98,
         "extra_args": []
       },
