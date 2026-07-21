@@ -1,0 +1,1453 @@
+{
+  "id": "e2c8e6ec-9e8a-4a81-a240-7e7d2befc2bf",
+  "extra": {
+    "ds": {
+      "scale": 0.299783242889227,
+      "offset": [
+        3340.6685561953486,
+        1162.2466002523859
+      ]
+    },
+    "reroutes": null,
+    "frontendVersion": "1.28.8"
+  },
+  "links": [
+    [
+      10,
+      13,
+      0,
+      10,
+      2,
+      "SEEDVR2_VAE"
+    ],
+    [
+      11,
+      14,
+      0,
+      10,
+      1,
+      "SEEDVR2_DIT"
+    ],
+    [
+      16,
+      17,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      19,
+      0,
+      14,
+      0,
+      "TORCH_COMPILE_ARGS"
+    ],
+    [
+      19,
+      19,
+      0,
+      13,
+      0,
+      "TORCH_COMPILE_ARGS"
+    ],
+    [
+      20,
+      21,
+      0,
+      22,
+      0,
+      "VIDEO"
+    ],
+    [
+      21,
+      22,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      10,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      24,
+      0,
+      23,
+      0,
+      "VIDEO"
+    ],
+    [
+      24,
+      22,
+      2,
+      24,
+      2,
+      "FLOAT"
+    ],
+    [
+      25,
+      22,
+      1,
+      24,
+      1,
+      "AUDIO"
+    ],
+    [
+      26,
+      25,
+      0,
+      28,
+      0,
+      "TORCH_COMPILE_ARGS"
+    ],
+    [
+      27,
+      25,
+      0,
+      29,
+      0,
+      "TORCH_COMPILE_ARGS"
+    ],
+    [
+      28,
+      31,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      28,
+      0,
+      30,
+      1,
+      "SEEDVR2_DIT"
+    ],
+    [
+      30,
+      29,
+      0,
+      30,
+      2,
+      "SEEDVR2_VAE"
+    ],
+    [
+      31,
+      27,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      27,
+      1,
+      31,
+      1,
+      "MASK"
+    ],
+    [
+      33,
+      30,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "id": 25,
+      "pos": [
+        -2951.703414790168,
+        269.8645594936205
+      ],
+      "mode": 4,
+      "size": [
+        307.671484375,
+        178
+      ],
+      "type": "SeedVR2TorchCompileSettings",
+      "flags": {},
+      "order": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "TORCH_COMPILE_ARGS",
+          "type": "TORCH_COMPILE_ARGS",
+          "label": null,
+          "links": [
+            26,
+            27
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2TorchCompileSettings"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "inductor",
+        "default",
+        false,
+        false,
+        64,
+        128
+      ]
+    },
+    {
+      "id": 26,
+      "pos": [
+        -2161.703414790165,
+        -210.1354405063798
+      ],
+      "mode": 4,
+      "size": [
+        210,
+        94.05179298404067
+      ],
+      "type": "Note",
+      "color": "#432",
+      "flags": {},
+      "order": 1,
+      "inputs": [],
+      "bgcolor": "#653",
+      "outputs": [],
+      "properties": {},
+      "showAdvanced": null,
+      "widgets_values": [
+        "Enable to upscale alpha/mask channel along with RGB channel (for RGBA inputs)"
+      ]
+    },
+    {
+      "id": 28,
+      "pos": [
+        -2521.703414790164,
+        79.8645594936203
+      ],
+      "mode": 4,
+      "size": [
+        307.6646484375,
+        202
+      ],
+      "type": "SeedVR2LoadDiTModel",
+      "flags": {},
+      "order": 10,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 26,
+          "name": "torch_compile_args",
+          "type": "TORCH_COMPILE_ARGS",
+          "label": null,
+          "shape": 7,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "SEEDVR2_DIT",
+          "type": "SEEDVR2_DIT",
+          "label": null,
+          "links": [
+            29
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2LoadDiTModel"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "seedvr2_ema_7b_sharp_fp16.safetensors",
+        "cuda:0",
+        36,
+        false,
+        "cpu",
+        false,
+        "sdpa"
+      ]
+    },
+    {
+      "id": 29,
+      "pos": [
+        -2521.703414790164,
+        369.8645594936211
+      ],
+      "mode": 4,
+      "size": [
+        312.866796875,
+        298
+      ],
+      "type": "SeedVR2LoadVAEModel",
+      "flags": {},
+      "order": 11,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 27,
+          "name": "torch_compile_args",
+          "type": "TORCH_COMPILE_ARGS",
+          "label": null,
+          "shape": 7,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "SEEDVR2_VAE",
+          "type": "SEEDVR2_VAE",
+          "label": null,
+          "links": [
+            30
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2LoadVAEModel"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "ema_vae_fp16.safetensors",
+        "cuda:0",
+        true,
+        1024,
+        128,
+        true,
+        1024,
+        128,
+        "false",
+        "cpu",
+        false
+      ]
+    },
+    {
+      "id": 30,
+      "pos": [
+        -1741.7034147901663,
+        59.864559493620284
+      ],
+      "mode": 4,
+      "size": [
+        270,
+        386
+      ],
+      "type": "SeedVR2VideoUpscaler",
+      "flags": {},
+      "order": 16,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 28,
+          "name": "image",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 29,
+          "name": "dit",
+          "type": "SEEDVR2_DIT",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 30,
+          "name": "vae",
+          "type": "SEEDVR2_VAE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            33
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2VideoUpscaler"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        42,
+        "fixed",
+        4096,
+        4096,
+        1,
+        false,
+        "lab",
+        0,
+        0,
+        0,
+        0,
+        "cpu",
+        false
+      ]
+    },
+    {
+      "id": 31,
+      "pos": [
+        -2131.703414790165,
+        -310.1354405063799
+      ],
+      "mode": 4,
+      "size": [
+        176.86484375,
+        46
+      ],
+      "type": "JoinImageWithAlpha",
+      "flags": {},
+      "order": 14,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 31,
+          "name": "image",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 32,
+          "name": "alpha",
+          "type": "MASK",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            28
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "showAdvanced": null,
+      "widgets_values": []
+    },
+    {
+      "id": 32,
+      "pos": [
+        -1411.703414790166,
+        59.864559493620284
+      ],
+      "mode": 4,
+      "size": [
+        270,
+        270
+      ],
+      "type": "SaveImage",
+      "flags": {},
+      "order": 18,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 33,
+          "name": "images",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 33,
+      "pos": [
+        -2931.703414790168,
+        509.8645594936214
+      ],
+      "mode": 4,
+      "size": [
+        290.1922351462714,
+        97.95592567265356
+      ],
+      "type": "Note",
+      "color": "#432",
+      "flags": {},
+      "order": 2,
+      "inputs": [],
+      "bgcolor": "#653",
+      "outputs": [],
+      "properties": {},
+      "showAdvanced": null,
+      "widgets_values": [
+        "Enable torch.compile optimization. First batch has compilation overhead, but speeds up subsequent batches. Best for long videos, not single images."
+      ]
+    },
+    {
+      "id": 19,
+      "pos": [
+        -352.2784329580519,
+        270.15795917812403
+      ],
+      "mode": 4,
+      "size": [
+        307.671484375,
+        178
+      ],
+      "type": "SeedVR2TorchCompileSettings",
+      "flags": {},
+      "order": 3,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "TORCH_COMPILE_ARGS",
+          "type": "TORCH_COMPILE_ARGS",
+          "label": null,
+          "links": [
+            18,
+            19
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2TorchCompileSettings"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "inductor",
+        "default",
+        false,
+        false,
+        64,
+        128
+      ]
+    },
+    {
+      "id": 20,
+      "pos": [
+        -340.0524012983403,
+        531.8088277800248
+      ],
+      "mode": 0,
+      "size": [
+        290.1922351462714,
+        97.95592567265356
+      ],
+      "type": "Note",
+      "color": "#432",
+      "flags": {},
+      "order": 4,
+      "inputs": [],
+      "bgcolor": "#653",
+      "outputs": [],
+      "properties": {},
+      "showAdvanced": null,
+      "widgets_values": [
+        "Enable torch.compile optimization. First batch has compilation overhead, but speeds up subsequent batches. Best for long videos, not single images."
+      ]
+    },
+    {
+      "id": 35,
+      "pos": [
+        -2335.5889317498854,
+        -567.5370328510796
+      ],
+      "mode": 0,
+      "size": [
+        480.234375,
+        72
+      ],
+      "type": "Label (rgthree)",
+      "color": "#fff0",
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 5,
+      "title": "Image Upscale",
+      "inputs": [],
+      "bgcolor": "#fff0",
+      "outputs": [],
+      "properties": {
+        "angle": 0,
+        "padding": 0,
+        "fontSize": 72,
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "fontFamily": "Arial",
+        "borderRadius": 0,
+        "backgroundColor": "transparent"
+      },
+      "showAdvanced": null
+    },
+    {
+      "id": 36,
+      "pos": [
+        473.6028563024469,
+        -528.065395021735
+      ],
+      "mode": 0,
+      "size": [
+        462.97265625,
+        72
+      ],
+      "type": "Label (rgthree)",
+      "color": "#fff0",
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 6,
+      "title": "Video Upscale",
+      "inputs": [],
+      "bgcolor": "#fff0",
+      "outputs": [],
+      "properties": {
+        "angle": 0,
+        "padding": 0,
+        "fontSize": 72,
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "fontFamily": "Arial",
+        "borderRadius": 0,
+        "backgroundColor": "transparent"
+      },
+      "showAdvanced": null
+    },
+    {
+      "id": 27,
+      "pos": [
+        -2501.703414790164,
+        -310.1354405063799
+      ],
+      "mode": 4,
+      "size": [
+        274.080078125,
+        314
+      ],
+      "type": "LoadImage",
+      "flags": {},
+      "order": 7,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            31
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "name": "MASK",
+          "type": "MASK",
+          "label": null,
+          "links": [
+            32
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "LoadImage"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "Runcomfy_example_1309.png",
+        "image"
+      ]
+    },
+    {
+      "id": 21,
+      "pos": [
+        -303.77933659817523,
+        -278.57885477556596
+      ],
+      "mode": 0,
+      "size": [
+        378.080078125,
+        310.6553276218343
+      ],
+      "type": "LoadVideo",
+      "flags": {},
+      "order": 8,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "label": null,
+          "links": [
+            20
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "LoadVideo"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "Runcomfy_Example_1309.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 22,
+      "pos": [
+        148.0948236893258,
+        -270.7531760308046
+      ],
+      "mode": 0,
+      "size": [
+        185.17734375,
+        66
+      ],
+      "type": "GetVideoComponents",
+      "flags": {},
+      "order": 15,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 20,
+          "name": "video",
+          "type": "VIDEO",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "images",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            21
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "name": "audio",
+          "type": "AUDIO",
+          "label": null,
+          "links": [
+            25
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "name": "fps",
+          "type": "FLOAT",
+          "label": null,
+          "links": [
+            24
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "GetVideoComponents"
+      },
+      "showAdvanced": null,
+      "widgets_values": []
+    },
+    {
+      "id": 17,
+      "pos": [
+        558.7271069245786,
+        -253.93905089280395
+      ],
+      "mode": 4,
+      "size": [
+        176.86484375,
+        46
+      ],
+      "type": "JoinImageWithAlpha",
+      "flags": {},
+      "order": 17,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 21,
+          "name": "image",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": null,
+          "name": "alpha",
+          "type": "MASK",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            16
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "showAdvanced": null,
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "pos": [
+        792.061254486064,
+        -260.02601564626286
+      ],
+      "mode": 0,
+      "size": [
+        210,
+        94.05179298404067
+      ],
+      "type": "Note",
+      "color": "#432",
+      "flags": {},
+      "order": 9,
+      "inputs": [],
+      "bgcolor": "#653",
+      "outputs": [],
+      "properties": {},
+      "showAdvanced": null,
+      "widgets_values": [
+        "Enable + connect input alpha to upscale alpha/mask channel along with RGB channel (for RGBA inputs)"
+      ]
+    },
+    {
+      "id": 10,
+      "pos": [
+        620.9369763230403,
+        63.362045495248616
+      ],
+      "mode": 0,
+      "size": [
+        270,
+        386
+      ],
+      "type": "SeedVR2VideoUpscaler",
+      "flags": {},
+      "order": 19,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 16,
+          "name": "image",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 11,
+          "name": "dit",
+          "type": "SEEDVR2_DIT",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 10,
+          "name": "vae",
+          "type": "SEEDVR2_VAE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            22
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2VideoUpscaler"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        42,
+        "fixed",
+        1080,
+        0,
+        33,
+        true,
+        "lab",
+        3,
+        0,
+        0,
+        0,
+        "cpu",
+        false
+      ]
+    },
+    {
+      "id": 13,
+      "pos": [
+        112.20188657736038,
+        343.0920422125768
+      ],
+      "mode": 0,
+      "size": [
+        312.866796875,
+        298
+      ],
+      "type": "SeedVR2LoadVAEModel",
+      "flags": {},
+      "order": 13,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 19,
+          "name": "torch_compile_args",
+          "type": "TORCH_COMPILE_ARGS",
+          "label": null,
+          "shape": 7,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "SEEDVR2_VAE",
+          "type": "SEEDVR2_VAE",
+          "label": null,
+          "links": [
+            10
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2LoadVAEModel"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "ema_vae_fp16.safetensors",
+        "cuda:0",
+        true,
+        1024,
+        128,
+        true,
+        768,
+        128,
+        "false",
+        "cpu",
+        false
+      ]
+    },
+    {
+      "id": 24,
+      "pos": [
+        1004.9370278355888,
+        -58.01068108880118
+      ],
+      "mode": 0,
+      "size": [
+        270,
+        78
+      ],
+      "type": "CreateVideo",
+      "flags": {},
+      "order": 20,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 22,
+          "name": "images",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 25,
+          "name": "audio",
+          "type": "AUDIO",
+          "label": null,
+          "shape": 7,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "link": 24,
+          "name": "fps",
+          "type": "FLOAT",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "widget": {
+            "name": "fps"
+          },
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "label": null,
+          "links": [
+            23
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "CreateVideo"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 23,
+      "pos": [
+        1352.1085937382763,
+        -58.86003657877547
+      ],
+      "mode": 0,
+      "size": [
+        337.90598542705266,
+        400.85021812478345
+      ],
+      "type": "SaveVideo",
+      "flags": {},
+      "order": 21,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 23,
+          "name": "video",
+          "type": "VIDEO",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "ver": "0.3.68",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "SaveVideo"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 14,
+      "pos": [
+        116.83032705037611,
+        84.2521114331769
+      ],
+      "mode": 0,
+      "size": [
+        307.6646484375,
+        202
+      ],
+      "type": "SeedVR2LoadDiTModel",
+      "flags": {},
+      "order": 12,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 18,
+          "name": "torch_compile_args",
+          "type": "TORCH_COMPILE_ARGS",
+          "label": null,
+          "shape": 7,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "SEEDVR2_DIT",
+          "type": "SEEDVR2_DIT",
+          "label": null,
+          "links": [
+            11
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "690cc39379c1481159ddd451368dbf2295930fc6",
+        "aux_id": "ainvfx/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
+        "Node name for S&R": "SeedVR2LoadDiTModel"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "seedvr2_ema_3b_fp16.safetensors",
+        "cuda:0",
+        32,
+        true,
+        "cpu",
+        false,
+        "sdpa"
+      ]
+    }
+  ],
+  "config": {},
+  "groups": [
+    {
+      "id": 1,
+      "color": "#3f789e",
+      "flags": {},
+      "title": "Image",
+      "bounding": [
+        -2961.703414790168,
+        -383.7354405063799,
+        1830,
+        1061.6
+      ],
+      "font_size": 24
+    },
+    {
+      "id": 2,
+      "color": "#3f789e",
+      "flags": {},
+      "title": "Video",
+      "bounding": [
+        -388.6123191417887,
+        -363.43687574963405,
+        2158.985260886927,
+        1064.0972983679126
+      ],
+      "font_size": 24
+    }
+  ],
+  "version": 0.4,
+  "revision": 0,
+  "definitions": null,
+  "last_link_id": 33,
+  "last_node_id": 36,
+  "floatingLinks": null
+}

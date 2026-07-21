@@ -1,0 +1,823 @@
+{
+  "workflows": [
+    {
+      "name": "1 Click Multiple Character Angles",
+      "description": "Input görselden 8 farklı kamera açısıyla karakter görselleri üret",
+      "category": "image",
+      "main_model": "Qwen Image Edit 2509 FP8",
+      "workflow_file": "multi-angle-qwen-edit-2509.json",
+      "notebook_file": "multi-angle-qwen-edit-2509.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [
+          {
+            "name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+            "location": "ComfyUI/models/diffusion_models/",
+            "link": "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors"
+          }
+        ],
+        "text_encoders": [
+          {
+            "name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+            "location": "ComfyUI/models/text_encoders/",
+            "link": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors"
+          }
+        ],
+        "vae": [
+          {
+            "name": "qwen_image_vae.safetensors",
+            "location": "ComfyUI/models/vae/",
+            "link": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors"
+          }
+        ],
+        "loras": [
+          {
+            "name": "Qwen-Edit-2509-Multiple-angles.safetensors",
+            "location": "ComfyUI/models/loras/",
+            "link": "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/loras/Qwen-Edit-2509-Multiple-angles.safetensors"
+          },
+          {
+            "name": "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors",
+            "location": "ComfyUI/models/loras/",
+            "link": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-2509/Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors"
+          }
+        ],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "LTX-2.3 ICLoRA LipDub",
+      "description": "Kaynak videonun dudak hareketini ve pose'unu koruyarak, text prompt ile tarif edilen yeni bir karakterde video üret (referans görsel yok, sadece metin ile karakter belirlenir)",
+      "category": "video",
+      "main_model": "LTX 2.3 22B Dev",
+      "workflow_file": "lipdub-ltx23-iclora.json",
+      "notebook_file": "lipdub-ltx23-iclora.ipynb",
+      "status": "tested",
+      "custom_nodes": [
+        {
+          "name": "ComfyUI-LTXVideo",
+          "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"
+        },
+        {
+          "name": "ComfyUI-KJNodes",
+          "url": "https://github.com/kijai/ComfyUI-KJNodes.git"
+        }
+      ],
+      "models": {
+        "diffusion_models": [
+          {
+            "name": "ltx-2.3-22b-dev.safetensors",
+            "location": "ComfyUI/models/checkpoints/",
+            "link": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-dev.safetensors"
+          }
+        ],
+        "text_encoders": [
+          {
+            "name": "comfy_gemma_3_12B_it.safetensors",
+            "location": "ComfyUI/models/text_encoders/",
+            "link": "https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it.safetensors"
+          }
+        ],
+        "vae": [
+          {
+            "name": "ltx-2-3-22b-audio_vae.safetensors",
+            "location": "ComfyUI/models/vae/",
+            "link": "https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_audio_vae_bf16.safetensors",
+            "note": "İndir ve ltx-2-3-22b-audio_vae.safetensors olarak yeniden adlandır (veya symlink)"
+          }
+        ],
+        "loras": [
+          {
+            "name": "ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+            "location": "ComfyUI/models/loras/ltxv/ltx2/",
+            "link": "https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control/resolve/main/ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors"
+          },
+          {
+            "name": "ltx-2.3-22b-distilled-lora-384-1.1.safetensors",
+            "location": "ComfyUI/models/loras/ltxv/ltx2/",
+            "link": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384-1.1.safetensors"
+          }
+        ],
+        "clip_vision": [],
+        "preprocessors": [
+          {
+            "name": "ltx-2.3-spatial-upscaler-x2-1.1.safetensors",
+            "location": "ComfyUI/models/upscale_models/",
+            "link": "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Consistent Face 3x3 Generator",
+      "description": "3x3 grid referans görselden 9 tutarlı yüz görseli üret (FaceDetailer + EyesDetailer + Depth LoRA + Upscale)",
+      "category": "image",
+      "main_model": "FLUX.1 Dev + FLUX.1 Fill Dev",
+      "workflow_file": "consistent-face-flux-dev.json",
+      "notebook_file": "consistent-face-flux-dev.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {
+          "name": "ComfyUI-Impact-Pack",
+          "url": "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
+        },
+        {
+          "name": "ComfyUI-Impact-Subpack",
+          "url": "https://github.com/ltdrdata/ComfyUI-Impact-Subpack.git"
+        },
+        {
+          "name": "rgthree-comfy",
+          "url": "https://github.com/rgthree/rgthree-comfy.git"
+        },
+        {
+          "name": "ComfyUI-KJNodes",
+          "url": "https://github.com/kijai/ComfyUI-KJNodes.git"
+        },
+        {
+          "name": "comfyui-depthanythingv2",
+          "url": "https://github.com/kijai/ComfyUI-DepthAnythingV2.git"
+        },
+        {
+          "name": "ComfyUI_essentials",
+          "url": "https://github.com/cubiq/ComfyUI_essentials.git"
+        },
+        {
+          "name": "ComfyUI_UltimateSDUpscale",
+          "url": "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git"
+        },
+        {
+          "name": "ComfyUI-TeaCache",
+          "url": "https://github.com/welltop-cn/ComfyUI-TeaCache.git"
+        },
+        {
+          "name": "ComfyUI-Crystools",
+          "url": "https://github.com/crystian/ComfyUI-Crystools.git"
+        },
+        {
+          "name": "ComfyUI-Image-Saver",
+          "url": "https://github.com/alexopus/ComfyUI-Image-Saver.git"
+        },
+        {
+          "name": "ComfyUI_LayerStyle",
+          "url": "https://github.com/chflame163/ComfyUI_LayerStyle.git"
+        },
+        {
+          "name": "comfyui_memory_cleanup",
+          "url": "https://github.com/Gerschel/comfyui_memory_cleanup.git"
+        },
+        {
+          "name": "ComfyUI_Comfyroll_CustomNodes",
+          "url": "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git"
+        }
+      ],
+      "models": {
+        "diffusion_models": [
+          {
+            "name": "flux1-dev.sft",
+            "location": "ComfyUI/models/diffusion_models/",
+            "link": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors",
+            "note": "Gated model - HF_TOKEN ve lisans kabulu gerekli. Dosya adı workflow'da .sft"
+          },
+          {
+            "name": "flux1-fill-dev.safetensors",
+            "location": "ComfyUI/models/diffusion_models/",
+            "link": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/resolve/main/flux1-fill-dev.safetensors",
+            "note": "Gated model - HF_TOKEN ve lisans kabulu gerekli"
+          }
+        ],
+        "text_encoders": [
+          {
+            "name": "t5xxl_fp16.safetensors",
+            "location": "ComfyUI/models/text_encoders/",
+            "link": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+          },
+          {
+            "name": "clip_l.safetensors",
+            "location": "ComfyUI/models/text_encoders/",
+            "link": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+          }
+        ],
+        "vae": [
+          {
+            "name": "ae.safetensors",
+            "location": "ComfyUI/models/vae/",
+            "link": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors",
+            "note": "Gated model"
+          }
+        ],
+        "loras": [
+          {
+            "name": "flux1-depth-dev-lora.safetensors",
+            "location": "ComfyUI/models/loras/",
+            "link": "https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora/resolve/main/flux1-depth-dev-lora.safetensors",
+            "note": "Gated model"
+          },
+          {
+            "name": "chinfixer-2000.safetensors",
+            "location": "ComfyUI/models/loras/FLux_Lora/",
+            "link": "https://civitai.com/models/775002/chin-fixer-2000",
+            "note": "CivitAI'dan manuel indirme gerekli"
+          },
+          {
+            "name": "Pandora-RAWr.safetensors",
+            "location": "ComfyUI/models/loras/FLux_Lora/",
+            "link": "https://civitai.com/models/1688671",
+            "note": "CivitAI'dan manuel indirme gerekli (skin texture LoRA)"
+          }
+        ],
+        "clip_vision": [],
+        "preprocessors": [
+          {
+            "name": "depth_anything_v2_vits_fp16.safetensors",
+            "location": "ComfyUI/models/depthanything/",
+            "link": "https://huggingface.co/Kijai/DepthAnythingV2-safetensors/resolve/main/depth_anything_v2_vits_fp16.safetensors"
+          },
+          {
+            "name": "sam_vit_b_01ec64.pth",
+            "location": "ComfyUI/models/sams/",
+            "link": "https://huggingface.co/spaces/abhishek/StableSAM/resolve/main/sam_vit_b_01ec64.pth"
+          },
+          {
+            "name": "Eyeful_v2-Paired.pt",
+            "location": "ComfyUI/models/ultralytics/bbox/",
+            "link": "https://huggingface.co/Tenofas/ComfyUI/resolve/main/ultralytics/bbox/Eyeful_v2-Paired.pt"
+          },
+          {
+            "name": "4xRealWebPhoto_v4_dat2.pth",
+            "location": "ComfyUI/models/upscale_models/",
+            "link": "https://huggingface.co/Phips/4xRealWebPhoto_v4_dat2/resolve/main/4xRealWebPhoto_v4_dat2.pth"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Coherent Scenes Multi-Model",
+      "description": "Birden fazla model kullanarak tutarlı sahne ve hikaye görselleri üret (WAN 2.2 video + FLUX görsel + Qwen edit + Foley ses)",
+      "category": "video",
+      "main_model": "WAN 2.2 + FLUX + Qwen + Foley",
+      "workflow_file": "coherent-scenes-multi-model.json",
+      "notebook_file": "coherent-scenes-multi-model.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"},
+        {"name": "ComfyUI-WanVideoWrapper", "url": "https://github.com/kijai/ComfyUI-WanVideoWrapper.git"},
+        {"name": "comfyui_segment_anything2", "url": "https://github.com/kijai/ComfyUI-segment-anything-2.git"},
+        {"name": "ComfyUI_essentials", "url": "https://github.com/cubiq/ComfyUI_essentials.git"},
+        {"name": "rgthree-comfy", "url": "https://github.com/rgthree/rgthree-comfy.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "wan2.2_t2v_14B_fp8_e4m3fn.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [
+          {"name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp16.safetensors", "location": "ComfyUI/models/text_encoders/"}
+        ],
+        "vae": [
+          {"name": "wan_2.2_vae.safetensors", "location": "ComfyUI/models/vae/"},
+          {"name": "ae.safetensors", "location": "ComfyUI/models/vae/"}
+        ],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Style Transfer — FLUX Kontext LoRA",
+      "description": "FLUX Kontext Dev modeli ile LoRA kullanarak stil transferi yap",
+      "category": "image",
+      "main_model": "FLUX.1 Kontext Dev",
+      "workflow_file": "style-transfer-flux-kontext.json",
+      "notebook_file": "style-transfer-flux-kontext.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [{"name": "rgthree-comfy", "url": "https://github.com/rgthree/rgthree-comfy.git"}],
+      "models": {
+        "diffusion_models": [{"name": "flux1-kontext-dev.safetensors", "location": "ComfyUI/models/diffusion_models/", "link": "https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/resolve/main/flux1-kontext-dev.safetensors"}],
+        "text_encoders": [
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp16.safetensors", "location": "ComfyUI/models/text_encoders/t5/"}
+        ],
+        "vae": [{"name": "ae.safetensors", "location": "ComfyUI/models/vae/FLUX1/", "link": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors", "note": "Gated model"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Scene Control — FLUX Kontext Preset",
+      "description": "FLUX Kontext Dev (Nunchaku INT4) ile sahne kontrolü ve hızlı görsel üretimi",
+      "category": "image",
+      "main_model": "FLUX.1 Kontext Dev (Nunchaku INT4)",
+      "workflow_file": "scene-control-flux-kontext.json",
+      "notebook_file": "scene-control-flux-kontext.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-nunchaku", "url": "https://github.com/mit-han-lab/ComfyUI-nunchaku.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "svdq-int4_r32-flux.1-kontext-dev.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp8_e4m3fn_scaled.safetensors", "location": "ComfyUI/models/text_encoders/"}
+        ],
+        "vae": [{"name": "ae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Photorealistic — FLUX RealismLoRA",
+      "description": "FLUX.1 Dev + RealismLoRA ile foto-gerçekçi görsel üretimi",
+      "category": "image",
+      "main_model": "FLUX.1 Dev",
+      "workflow_file": "photorealistic-flux-realism-lora.json",
+      "notebook_file": "photorealistic-flux-realism-lora.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "flux1-dev.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp16.safetensors", "location": "ComfyUI/models/text_encoders/"}
+        ],
+        "vae": [{"name": "ae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [{"name": "RealismLoRA.safetensors", "location": "ComfyUI/models/loras/"}],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Outpainting — FLUX + SDXL",
+      "description": "FLUX.1 Dev FP8 ve SDXL modelleri ile görsel genişletme (outpainting)",
+      "category": "image",
+      "main_model": "FLUX.1 Dev FP8 + SDXL",
+      "workflow_file": "outpainting-flux-sdxl.json",
+      "notebook_file": "outpainting-flux-sdxl.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "flux1-dev-fp8.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp8_e4m3fn.safetensors", "location": "ComfyUI/models/text_encoders/"}
+        ],
+        "vae": [{"name": "ae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Face Swap — FLUX Redux ACE",
+      "description": "FLUX.1 Dev + Fill + Redux ile hassas yüz değiştirme",
+      "category": "image",
+      "main_model": "FLUX.1 Dev + Fill + Redux",
+      "workflow_file": "face-swap-flux-redux-ace.json",
+      "notebook_file": "face-swap-flux-redux-ace.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI_PuLID_Flux", "url": "https://github.com/cubiq/ComfyUI_PuLID_Flux.git"},
+        {"name": "ComfyUI-Florence2", "url": "https://github.com/kijai/ComfyUI-Florence2.git"}
+      ],
+      "models": {
+        "diffusion_models": [
+          {"name": "flux1-dev.safetensors", "location": "ComfyUI/models/diffusion_models/"},
+          {"name": "flux1-fill-dev.safetensors", "location": "ComfyUI/models/diffusion_models/"}
+        ],
+        "text_encoders": [
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp16.safetensors", "location": "ComfyUI/models/text_encoders/"}
+        ],
+        "vae": [{"name": "ae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [{"name": "sigclip_vision_patch14_384.safetensors", "location": "ComfyUI/models/clip_vision/"}],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Image Edit — FLUX.2 Klein 9B KV",
+      "description": "FLUX.2 Klein 9B KV FP8 modeli ile akıllı görsel düzenleme",
+      "category": "image",
+      "main_model": "FLUX.2 Klein 9B KV FP8",
+      "workflow_file": "image-edit-flux2-klein-kv.json",
+      "notebook_file": "image-edit-flux2-klein-kv.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "flux-2-klein-9b-kv-fp8.safetensors", "location": "ComfyUI/models/diffusion_models/", "link": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-kv-fp8/resolve/main/flux-2-klein-9b-kv-fp8.safetensors"}],
+        "text_encoders": [{"name": "qwen_3_8b_fp8mixed.safetensors", "location": "ComfyUI/models/text_encoders/", "link": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"}],
+        "vae": [{"name": "flux2-vae.safetensors", "location": "ComfyUI/models/vae/", "link": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Face Swap — FLUX.2 Klein + SeedVR2",
+      "description": "FLUX.2 Klein 9B ve SeedVR2 ile gerçekçi yüz değiştirme",
+      "category": "image",
+      "main_model": "FLUX.2 Klein 9B + SeedVR2",
+      "workflow_file": "face-swap-flux2-klein.json",
+      "notebook_file": "face-swap-flux2-klein.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "comfyui_controlnet_aux", "url": "https://github.com/Fannovel16/comfyui_controlnet_aux.git"},
+        {"name": "rgthree-comfy", "url": "https://github.com/rgthree/rgthree-comfy.git"},
+        {"name": "ComfyUI-SeedVR2_VideoUpscaler", "url": "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "flux-2-klein-9b-fp8.safetensors", "location": "ComfyUI/models/diffusion_models/", "link": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-fp8/resolve/main/flux-2-klein-9b-fp8.safetensors"}],
+        "text_encoders": [{"name": "qwen_3_8b.safetensors", "location": "ComfyUI/models/text_encoders/", "link": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b.safetensors"}],
+        "vae": [{"name": "flux2-vae.safetensors", "location": "ComfyUI/models/vae/", "link": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "UltraRealistic — FLUX PuLID",
+      "description": "FLUX.1 Dev + PuLID + UltraRealPhoto LoRA ile ultra gerçekçi portre üretimi",
+      "category": "image",
+      "main_model": "FLUX.1 Dev + PuLID + UltraRealPhoto LoRA",
+      "workflow_file": "ultrarealistic-flux-pulid.json",
+      "notebook_file": "ultrarealistic-flux-pulid.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI_PuLID_Flux", "url": "https://github.com/cubiq/ComfyUI_PuLID_Flux.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "flux1-dev.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp16.safetensors", "location": "ComfyUI/models/text_encoders/"}
+        ],
+        "vae": [{"name": "ae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [{"name": "UltraRealPhoto_v2.safetensors", "location": "ComfyUI/models/loras/"}],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Upscale — SeedVR2 V2.5",
+      "description": "SeedVR2 7B Sharp ve 3B modelleri ile video/görsel upscale",
+      "category": "video",
+      "main_model": "SeedVR2 7B Sharp + 3B",
+      "workflow_file": "upscale-seedvr2-v25.json",
+      "notebook_file": "upscale-seedvr2-v25.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "seedvr2-7b-sharp.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [],
+        "vae": [],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Text to Image — FLUX.2 Dev",
+      "description": "FLUX.2 Dev FP8 + Turbo LoRA ile hızlı text-to-image üretimi",
+      "category": "image",
+      "main_model": "FLUX.2 Dev FP8 + Turbo LoRA",
+      "workflow_file": "text-to-image-flux2-dev.json",
+      "notebook_file": "text-to-image-flux2-dev.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "flux2_dev_fp8mixed.safetensors", "location": "ComfyUI/models/diffusion_models/", "link": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors"}],
+        "text_encoders": [{"name": "mistral_3_small_flux2_bf16.safetensors", "location": "ComfyUI/models/text_encoders/", "link": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors"}],
+        "vae": [{"name": "flux2-vae.safetensors", "location": "ComfyUI/models/vae/", "link": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"}],
+        "loras": [{"name": "Flux_2-Turbo-LoRA_comfyui.safetensors", "location": "ComfyUI/models/loras/", "link": "https://huggingface.co/ByteZSzn/Flux.2-Turbo-ComfyUI/resolve/main/Flux_2-Turbo-LoRA_comfyui.safetensors"}],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Illustration to Realism — Qwen Edit",
+      "description": "Qwen Image Edit 2509 ile illüstrasyon/çizim görselleri gerçekçi fotoğraflara dönüştür",
+      "category": "image",
+      "main_model": "Qwen Image Edit 2509",
+      "workflow_file": "illustration-to-real-qwen-edit.json",
+      "notebook_file": "illustration-to-real-qwen-edit.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [{"name": "qwen_2.5_vl_7b_fp8_scaled.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "qwen_image_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Image Upscale — Z-Image-Turbo 2K",
+      "description": "Z-Image-Turbo ve RealESRGAN modelleri ile görsel upscale (2K çözünürlük)",
+      "category": "image",
+      "main_model": "Z-Image-Turbo + RealESRGAN",
+      "workflow_file": "image-upscale-z-turbo.json",
+      "notebook_file": "image-upscale-z-turbo.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [],
+        "text_encoders": [],
+        "vae": [],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": [{"name": "RealESRGAN_x4plus.pth", "location": "ComfyUI/models/upscale_models/"}]
+      }
+    },
+    {
+      "name": "Edit Anything — LTX 2.3",
+      "description": "LTX 2.3 22B Dev FP8 ile prompt bazlı video düzenleme",
+      "category": "video",
+      "main_model": "LTX 2.3 22B Dev FP8",
+      "workflow_file": "edit-anything-ltx23.json",
+      "notebook_file": "edit-anything-ltx23.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-LTXVideo", "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "ltx-2.3-22b-dev-fp8_e4m3fn.safetensors", "location": "ComfyUI/models/checkpoints/"}],
+        "text_encoders": [{"name": "gemma_3_12B_it.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "ltx-2-3-22b-audio_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Video Face Swap — LTX 2.3",
+      "description": "LTX 2.3 22B Dev FP8 ile videoda yüz değiştirme",
+      "category": "video",
+      "main_model": "LTX 2.3 22B Dev FP8",
+      "workflow_file": "video-face-swap-ltx23.json",
+      "notebook_file": "video-face-swap-ltx23.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-LTXVideo", "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "ltx-2.3-22b-dev-fp8_e4m3fn.safetensors", "location": "ComfyUI/models/checkpoints/"}],
+        "text_encoders": [{"name": "gemma_3_12B_it.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "ltx-2-3-22b-audio_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Talking Avatar — LTX 2.3 ID-LoRA",
+      "description": "LTX 2.3 22B Dev + ID-LoRA ile konuşan avatar videoları üret",
+      "category": "video",
+      "main_model": "LTX 2.3 22B Dev",
+      "workflow_file": "talking-avatar-ltx23-idlora.json",
+      "notebook_file": "talking-avatar-ltx23-idlora.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-LTXVideo", "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "ltx-2.3-22b-dev.safetensors", "location": "ComfyUI/models/checkpoints/"}],
+        "text_encoders": [{"name": "gemma_3_12B_it.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "ltx-2-3-22b-audio_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [{"name": "ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors", "location": "ComfyUI/models/loras/"}],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Image to Video — LTX 2.3",
+      "description": "LTX 2.3 22B Dev ile tek görselden sinematik video üret",
+      "category": "video",
+      "main_model": "LTX 2.3 22B Dev",
+      "workflow_file": "image-to-video-ltx23.json",
+      "notebook_file": "image-to-video-ltx23.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-LTXVideo", "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "ltx-2.3-22b-dev.safetensors", "location": "ComfyUI/models/checkpoints/"}],
+        "text_encoders": [{"name": "gemma_3_12B_it.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "ltx-2-3-22b-audio_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Movie Builder — LTX 2.3 + FLUX.2 Klein",
+      "description": "LTX 2.3 ve FLUX.2 Klein modelleri ile AI film sahneleri oluştur",
+      "category": "video",
+      "main_model": "LTX 2.3 + FLUX.2 Klein",
+      "workflow_file": "movie-builder-ltx23-flux2.json",
+      "notebook_file": "movie-builder-ltx23-flux2.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-LTXVideo", "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [
+          {"name": "ltx-2.3-22b-dev.safetensors", "location": "ComfyUI/models/checkpoints/"},
+          {"name": "flux2-klein.safetensors", "location": "ComfyUI/models/diffusion_models/"}
+        ],
+        "text_encoders": [
+          {"name": "gemma_3_12B_it.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "clip_l.safetensors", "location": "ComfyUI/models/text_encoders/"},
+          {"name": "t5xxl_fp8_e4m3fn.safetensors", "location": "ComfyUI/models/text_encoders/"}
+        ],
+        "vae": [
+          {"name": "ltx-2-3-22b-audio_vae.safetensors", "location": "ComfyUI/models/vae/"},
+          {"name": "ae.safetensors", "location": "ComfyUI/models/vae/"}
+        ],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Image Edit — Qwen 2509",
+      "description": "Qwen Image Edit 2509 FP8 modeli ile prompt bazlı görsel düzenleme",
+      "category": "image",
+      "main_model": "Qwen Image Edit 2509 FP8",
+      "workflow_file": "image-edit-qwen-2509.json",
+      "notebook_file": "image-edit-qwen-2509.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "qwen_image_edit_2509_fp8_e4m3fn.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [{"name": "qwen_2.5_vl_7b_fp8_scaled.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "qwen_image_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Dearchive Footage — LTX 2.3",
+      "description": "LTX 2.3 22B Dev + Dearchive LoRA ile eski arşiv görüntüleri restore et",
+      "category": "video",
+      "main_model": "LTX 2.3 22B Dev",
+      "workflow_file": "dearchive-ltx23.json",
+      "notebook_file": "dearchive-ltx23.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-LTXVideo", "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "ltx-2.3-22b-dev.safetensors", "location": "ComfyUI/models/checkpoints/"}],
+        "text_encoders": [{"name": "gemma_3_12B_it.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "ltx-2-3-22b-audio_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [{"name": "ltx-2.3-dearchive-lora.safetensors", "location": "ComfyUI/models/loras/"}],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Image Upscale — SeedVR2",
+      "description": "SeedVR2 7B modeli ile görsel upscale",
+      "category": "image",
+      "main_model": "SeedVR2 7B",
+      "workflow_file": "image-upscale-seedvr2.json",
+      "notebook_file": "image-upscale-seedvr2.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [],
+      "models": {
+        "diffusion_models": [{"name": "seedvr2-7b.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [],
+        "vae": [],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Video Upscale — SeedVR2",
+      "description": "SeedVR2 7B modeli ile video upscale",
+      "category": "video",
+      "main_model": "SeedVR2 7B",
+      "workflow_file": "video-upscale-seedvr2.json",
+      "notebook_file": "video-upscale-seedvr2.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "seedvr2-7b.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [],
+        "vae": [],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Video Face Swap — LTX 2.3 LoRA",
+      "description": "LTX 2.3 22B Distilled FP8 + LoRA ile hızlı video yüz değiştirme",
+      "category": "video",
+      "main_model": "LTX 2.3 22B Distilled FP8",
+      "workflow_file": "video-face-swap-ltx23-lora.json",
+      "notebook_file": "video-face-swap-ltx23-lora.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-LTXVideo", "url": "https://github.com/Lightricks/ComfyUI-LTXVideo.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "ltx-2.3-22b-distilled-fp8.safetensors", "location": "ComfyUI/models/checkpoints/"}],
+        "text_encoders": [{"name": "gemma_3_12B_it.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "ltx-2-3-22b-audio_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Pose Control — WAN 2.2 VACE",
+      "description": "WAN 2.2 T2V 14B FP8 + VACE ile poz kontrollü video üretimi",
+      "category": "video",
+      "main_model": "WAN 2.2 T2V 14B FP8",
+      "workflow_file": "pose-control-wan22-vace.json",
+      "notebook_file": "pose-control-wan22-vace.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-WanVideoWrapper", "url": "https://github.com/kijai/ComfyUI-WanVideoWrapper.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "wan2.2_t2v_14B_fp8_e4m3fn.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [{"name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "wan_2.2_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "VACE Control Video — WAN 2.1",
+      "description": "WAN 2.1 VACE 14B ile video kontrol (pose, depth, edge)",
+      "category": "video",
+      "main_model": "WAN 2.1 VACE 14B",
+      "workflow_file": "vace-control-wan21.json",
+      "notebook_file": "vace-control-wan21.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-WanVideoWrapper", "url": "https://github.com/kijai/ComfyUI-WanVideoWrapper.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "wan2.1-vace-14b.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [{"name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "wan_2.1_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    },
+    {
+      "name": "Animate Character Swap — WAN 2.2",
+      "description": "WAN 2.2 Animate 14B FP8 ile otomatik karakter değiştirme animasyonu",
+      "category": "video",
+      "main_model": "WAN 2.2 Animate 14B FP8",
+      "workflow_file": "animate-character-swap-wan22.json",
+      "notebook_file": "animate-character-swap-wan22.ipynb",
+      "status": "not-tested",
+      "custom_nodes": [
+        {"name": "ComfyUI-WanVideoWrapper", "url": "https://github.com/kijai/ComfyUI-WanVideoWrapper.git"},
+        {"name": "ComfyUI-KJNodes", "url": "https://github.com/kijai/ComfyUI-KJNodes.git"},
+        {"name": "ComfyUI-VideoHelperSuite", "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git"}
+      ],
+      "models": {
+        "diffusion_models": [{"name": "wan2.2_animate_14B_fp8_e4m3fn.safetensors", "location": "ComfyUI/models/diffusion_models/"}],
+        "text_encoders": [{"name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors", "location": "ComfyUI/models/text_encoders/"}],
+        "vae": [{"name": "wan_2.2_vae.safetensors", "location": "ComfyUI/models/vae/"}],
+        "loras": [],
+        "clip_vision": [],
+        "preprocessors": []
+      }
+    }
+  ]
+}
